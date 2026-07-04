@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConstructionApi</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.6; }
+    header { background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%); color: #fff; padding: 4rem 2rem; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.1rem; opacity: 0.85; max-width: 640px; margin: 0 auto; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+    section { margin-bottom: 3rem; }
+    h2 { font-size: 1.5rem; margin-bottom: 1rem; color: #1e3a5f; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+    .card { background: #fff; border-radius: 10px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; }
+    .card h3 { color: #1e3a5f; margin-bottom: 0.5rem; }
+    .card p { font-size: 0.9rem; color: #475569; }
+    .tag { display: inline-block; background: #dbeafe; color: #1e40af; font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 4px; margin-top: 0.5rem; }
+    .architecture { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: center; margin: 2rem 0; }
+    .arch-box { background: #fff; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; text-align: center; min-width: 160px; }
+    .arch-box.api { border-color: #3b82f6; }
+    .arch-box.mcp { border-color: #10b981; }
+    .arch-box.agent { border-color: #8b5cf6; }
+    .arch-box h4 { font-size: 0.9rem; margin-bottom: 0.25rem; }
+    .arch-box p { font-size: 0.8rem; color: #64748b; }
+    .arrow { font-size: 1.5rem; color: #94a3b8; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid #e2e8f0; }
+    th { background: #f1f5f9; font-weight: 600; color: #1e3a5f; }
+    code { background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.85rem; }
+    footer { text-align: center; padding: 2rem; color: #94a3b8; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ConstructionApi</h1>
+    <p>REST API + MCP server for construction estimation. Manages price lists and assemblies to power agentic workflows.</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>Architecture</h2>
+      <div class="architecture">
+        <div class="arch-box api">
+          <h4>REST API</h4>
+          <p>CRUD endpoints for PriceLists &amp; Assemblies</p>
+        </div>
+        <span class="arrow">&#8594;</span>
+        <div class="arch-box mcp">
+          <h4>MCP Server</h4>
+          <p>Search tools for AI agents</p>
+        </div>
+        <span class="arrow">&#8594;</span>
+        <div class="arch-box agent">
+          <h4>AI Agent</h4>
+          <p>Claude / ChatGPT / Cursor</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Entities</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>PriceList</h3>
+          <p>Individual catalogue item with code, description, category, subcategory, unit of measure, price, and percentage breakdowns (safety, labour, material, equipment).</p>
+          <span class="tag">Base Item</span>
+        </div>
+        <div class="card">
+          <h3>Assembly</h3>
+          <p>Package of one or more price list items with a quantity multiplier. Contains name, category, type (FixedQuantity / QuantityFactor), value, and driver flag.</p>
+          <span class="tag">Package</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>API Endpoints</h2>
+      <table>
+        <thead>
+          <tr><th>Method</th><th>Route</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>GET</td><td><code>/api/pricelists</code></td><td>List all price list items</td></tr>
+          <tr><td>GET</td><td><code>/api/pricelists/search</code></td><td>Filter by code, description, category, etc.</td></tr>
+          <tr><td>GET</td><td><code>/api/pricelists/{id}</code></td><td>Get single item</td></tr>
+          <tr><td>POST</td><td><code>/api/pricelists</code></td><td>Create item</td></tr>
+          <tr><td>PUT</td><td><code>/api/pricelists/{id}</code></td><td>Update item</td></tr>
+          <tr><td>DELETE</td><td><code>/api/pricelists/{id}</code></td><td>Delete item</td></tr>
+          <tr><td>GET</td><td><code>/api/assemblies</code></td><td>List all assemblies</td></tr>
+          <tr><td>GET</td><td><code>/api/assemblies/search</code></td><td>Filter by name and/or category</td></tr>
+          <tr><td>GET</td><td><code>/api/assemblies/{id}</code></td><td>Get single assembly</td></tr>
+          <tr><td>POST</td><td><code>/api/assemblies</code></td><td>Create assembly</td></tr>
+          <tr><td>PUT</td><td><code>/api/assemblies/{id}</code></td><td>Update assembly</td></tr>
+          <tr><td>DELETE</td><td><code>/api/assemblies/{id}</code></td><td>Delete assembly</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>MCP Tools</h2>
+      <table>
+        <thead>
+          <tr><th>Tool</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>SearchPriceLists</code></td><td>Search price list items by catalogue code, description, author, item code, category, subcategory</td></tr>
+          <tr><td><code>SearchAssemblies</code></td><td>Search assembly packages by name and/or category</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Estimation Workflow</h2>
+      <p style="margin-bottom:1rem;">The architecture supports an agentic estimation pipeline:</p>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:1.5rem;">
+        <ol style="margin-left:1.25rem;">
+          <li><strong>Search</strong> &mdash; AI agent queries relevant PriceList items via MCP tools</li>
+          <li><strong>Package</strong> &mdash; Items are grouped into Assemblies with quantities and type</li>
+          <li><strong>Calculate</strong> &mdash; Each Assembly produces a cost estimate using its items, quantities, and percentage breakdowns</li>
+          <li><strong>Iterate</strong> &mdash; The agent refines the estimate by selecting alternative items or adjusting assembly composition</li>
+        </ol>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    ConstructionApi &mdash; .NET 9 &middot; SQLite &middot; Swagger &middot; MCP
+  </footer>
+</body>
+</html>
