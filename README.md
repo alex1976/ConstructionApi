@@ -1,6 +1,6 @@
 # ConstructionApi
 
-A .NET 9 Web API that exposes PriceList data from a SQLite database, seeded from a CSV file.
+A .NET 9 Web API that exposes PriceList and Assemblies data from a SQLite database, seeded from a CSV file.
 
 ## Endpoints
 
@@ -106,7 +106,7 @@ GET /api/assemblies
 Filters assemblies by optional query parameters (AND logic, substring match).
 
 ```
-GET /api/assemblies/search?category=Structural&name=Foundation
+GET /api/assemblies/search?category=Structural
 ```
 
 | Parameter | Type | Description |
@@ -131,14 +131,14 @@ Content-Type: application/json
 {
   "name": "Foundation Assembly",
   "category": "Structural",
-  "type": "FixedQuantity",
-  "value": 3.5,
-  "isDriver": true,
-  "priceListId": 1
+  "assemblyPriceListItems": [
+    { "priceListId": 1, "type": "FixedQuantity", "value": 3.5, "isDriver": true },
+    { "priceListId": 2, "type": "QuantityFactor", "value": 1.25, "isDriver": false }
+  ]
 }
 ```
 
-`type` accepts `FixedQuantity` or `QuantityFactor`.
+Each item in `assemblyPriceListItems` requires `priceListId`, `type` (`FixedQuantity` or `QuantityFactor`), `value`, and `isDriver`.
 
 ### PUT /api/assemblies/{id}
 Fully updates an existing assembly.
@@ -151,10 +151,10 @@ Content-Type: application/json
   "id": 1,
   "name": "Beam Assembly",
   "category": "Structural",
-  "type": "QuantityFactor",
-  "value": 1.25,
-  "isDriver": false,
-  "priceListId": 2
+  "assemblyPriceListItems": [
+    { "assemblyId": 1, "priceListId": 3, "type": "QuantityFactor", "value": 1.25, "isDriver": false },
+    { "assemblyId": 1, "priceListId": 7, "type": "FixedQuantity", "value": 2.0, "isDriver": true }
+  ]
 }
 ```
 

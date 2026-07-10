@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ConstructionApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260704124613_InitialCreate")]
+    [Migration("20260710141824_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -18,6 +18,49 @@ namespace ConstructionApi.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.4");
+
+            modelBuilder.Entity("ConstructionApi.Models.Assembly", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Assemblies");
+                });
+
+            modelBuilder.Entity("ConstructionApi.Models.AssemblyPriceList", b =>
+                {
+                    b.Property<int>("AssemblyId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PriceListId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsDriver")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("Value")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("AssemblyId", "PriceListId");
+
+                    b.HasIndex("PriceListId");
+
+                    b.ToTable("AssemblyPriceLists");
+                });
 
             modelBuilder.Entity("ConstructionApi.Models.PriceList", b =>
                 {
@@ -79,6 +122,30 @@ namespace ConstructionApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PriceLists");
+                });
+
+            modelBuilder.Entity("ConstructionApi.Models.AssemblyPriceList", b =>
+                {
+                    b.HasOne("ConstructionApi.Models.Assembly", "Assembly")
+                        .WithMany("AssemblyPriceListItems")
+                        .HasForeignKey("AssemblyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ConstructionApi.Models.PriceList", "PriceList")
+                        .WithMany()
+                        .HasForeignKey("PriceListId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Assembly");
+
+                    b.Navigation("PriceList");
+                });
+
+            modelBuilder.Entity("ConstructionApi.Models.Assembly", b =>
+                {
+                    b.Navigation("AssemblyPriceListItems");
                 });
 #pragma warning restore 612, 618
         }

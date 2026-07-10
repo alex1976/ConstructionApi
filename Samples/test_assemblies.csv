@@ -1,0 +1,29 @@
+name,category,priceListCode,type,value,isDriver
+Foundation MEP Assembly,MEP,ITM0001,FixedQuantity,2.5,true
+Foundation MEP Assembly,MEP,ITM0002,FixedQuantity,1.0,false
+Foundation MEP Assembly,MEP,ITM0003,QuantityFactor,1.5,false
+Structural Masonry Kit,Structural,ITM0003,QuantityFactor,3.0,true
+Structural Masonry Kit,Structural,ITM0005,QuantityFactor,2.0,false
+Structural Masonry Kit,Structural,ITM0011,FixedQuantity,4.0,false
+Structural Masonry Kit,Structural,ITM0012,FixedQuantity,1.5,false
+Painting Finishes Pack,Finishes,ITM0002,QuantityFactor,2.0,true
+Painting Finishes Pack,Finishes,ITM0006,FixedQuantity,1.0,false
+Painting Finishes Pack,Finishes,ITM0019,QuantityFactor,1.5,false
+Painting Finishes Pack,Finishes,ITM0048,FixedQuantity,3.0,false
+Concrete Works Bundle,Structural,ITM0008,FixedQuantity,5.0,true
+Concrete Works Bundle,Structural,ITM0009,QuantityFactor,2.0,false
+Concrete Works Bundle,Structural,ITM0010,FixedQuantity,3.0,false
+Concrete Works Bundle,Structural,ITM0023,QuantityFactor,1.0,false
+Electrical Complete,MEP,ITM0001,FixedQuantity,1.0,true
+Electrical Complete,MEP,ITM0043,QuantityFactor,4.0,false
+Electrical Complete,MEP,ITM0044,FixedQuantity,2.0,false
+Electrical Complete,MEP,ITM0045,FixedQuantity,1.5,false
+Electrical Complete,MEP,ITM0059,QuantityFactor,2.0,false
+Plumbing System,MEP,ITM0004,FixedQuantity,3.0,true
+Plumbing System,MEP,ITM0016,QuantityFactor,2.5,false
+Plumbing System,MEP,ITM0017,FixedQuantity,2.0,false
+Plumbing System,MEP,ITM0034,QuantityFactor,1.5,false
+Flooring Finishes,Finishes,ITM0013,FixedQuantity,4.0,true
+Flooring Finishes,Finishes,ITM0020,QuantityFactor,2.0,false
+Flooring Finishes,Finishes,ITM0024,FixedQuantity,3.0,false
+Flooring Finishes,Finishes,ITM0030,QuantityFactor,1.5,false

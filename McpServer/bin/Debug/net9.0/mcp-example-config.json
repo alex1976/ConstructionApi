@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "construction-api": {
+      "type": "stdio",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "PATH_TO_MCPSERVER",
+        "--urls",
+        "http://localhost:5100"
+      ]
+    },
+    "construction-api-http": {
+      "type": "url",
+      "url": "http://localhost:5100/mcp"
+    }
+  }
+}

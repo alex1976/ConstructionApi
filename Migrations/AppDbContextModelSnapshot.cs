@@ -26,14 +26,24 @@ namespace ConstructionApi.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("IsDriver")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.HasKey("Id");
+
+                    b.ToTable("Assemblies");
+                });
+
+            modelBuilder.Entity("ConstructionApi.Models.AssemblyPriceList", b =>
+                {
+                    b.Property<int>("AssemblyId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("PriceListId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsDriver")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Type")
@@ -42,11 +52,11 @@ namespace ConstructionApi.Migrations
                     b.Property<decimal>("Value")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.HasKey("AssemblyId", "PriceListId");
 
                     b.HasIndex("PriceListId");
 
-                    b.ToTable("Assemblies");
+                    b.ToTable("AssemblyPriceLists");
                 });
 
             modelBuilder.Entity("ConstructionApi.Models.PriceList", b =>
@@ -111,15 +121,28 @@ namespace ConstructionApi.Migrations
                     b.ToTable("PriceLists");
                 });
 
-            modelBuilder.Entity("ConstructionApi.Models.Assembly", b =>
+            modelBuilder.Entity("ConstructionApi.Models.AssemblyPriceList", b =>
                 {
+                    b.HasOne("ConstructionApi.Models.Assembly", "Assembly")
+                        .WithMany("AssemblyPriceListItems")
+                        .HasForeignKey("AssemblyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ConstructionApi.Models.PriceList", "PriceList")
                         .WithMany()
                         .HasForeignKey("PriceListId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Assembly");
+
                     b.Navigation("PriceList");
+                });
+
+            modelBuilder.Entity("ConstructionApi.Models.Assembly", b =>
+                {
+                    b.Navigation("AssemblyPriceListItems");
                 });
 #pragma warning restore 612, 618
         }

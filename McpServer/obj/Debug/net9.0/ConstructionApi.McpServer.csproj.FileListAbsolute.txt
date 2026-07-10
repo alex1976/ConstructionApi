@@ -79,3 +79,5 @@ C:\Users\aless\source\repos\ConstructionApi\McpServer\obj\Debug\net9.0\refint\Co
 C:\Users\aless\source\repos\ConstructionApi\McpServer\obj\Debug\net9.0\ConstructionApi.McpServer.pdb
 C:\Users\aless\source\repos\ConstructionApi\McpServer\obj\Debug\net9.0\ConstructionApi.McpServer.genruntimeconfig.cache
 C:\Users\aless\source\repos\ConstructionApi\McpServer\obj\Debug\net9.0\ref\ConstructionApi.McpServer.dll
+C:\Users\aless\source\repos\ConstructionApi\McpServer\bin\Debug\net9.0\mcp-example-config.json
+C:\Users\aless\source\repos\ConstructionApi\McpServer\obj\Debug\net9.0\ConstructionApi.McpServer.sourcelink.json

@@ -153,3 +153,4 @@ C:\Users\aless\source\repos\ConstructionApi\obj\Debug\net9.0\refint\Construction
 C:\Users\aless\source\repos\ConstructionApi\obj\Debug\net9.0\ConstructionApi.pdb
 C:\Users\aless\source\repos\ConstructionApi\obj\Debug\net9.0\ConstructionApi.genruntimeconfig.cache
 C:\Users\aless\source\repos\ConstructionApi\obj\Debug\net9.0\ref\ConstructionApi.dll
+C:\Users\aless\source\repos\ConstructionApi\obj\Debug\net9.0\ConstructionApi.sourcelink.json

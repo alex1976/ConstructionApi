@@ -19,7 +19,10 @@ public class AssembliesController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<Assembly>>> GetAll()
     {
-        return await _db.Assemblies.Include(a => a.PriceList).ToListAsync();
+        return await _db.Assemblies
+            .Include(a => a.AssemblyPriceListItems)
+            .ThenInclude(ap => ap.PriceList)
+            .ToListAsync();
     }
 
     [HttpGet("search")]
@@ -27,7 +30,10 @@ public class AssembliesController : ControllerBase
         [FromQuery] string? name = null,
         [FromQuery] string? category = null)
     {
-        var query = _db.Assemblies.Include(a => a.PriceList).AsQueryable();
+        var query = _db.Assemblies
+            .Include(a => a.AssemblyPriceListItems)
+            .ThenInclude(ap => ap.PriceList)
+            .AsQueryable();
 
         if (!string.IsNullOrWhiteSpace(name))
             query = query.Where(a => a.Name.Contains(name));
@@ -40,7 +46,10 @@ public class AssembliesController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<Assembly>> GetById(int id)
     {
-        var item = await _db.Assemblies.Include(a => a.PriceList).FirstOrDefaultAsync(a => a.Id == id);
+        var item = await _db.Assemblies
+            .Include(a => a.AssemblyPriceListItems)
+            .ThenInclude(ap => ap.PriceList)
+            .FirstOrDefaultAsync(a => a.Id == id);
         if (item is null) return NotFound();
         return item;
     }
@@ -58,15 +67,16 @@ public class AssembliesController : ControllerBase
     {
         if (id != assembly.Id) return BadRequest();
 
-        var existing = await _db.Assemblies.FindAsync(id);
+        var existing = await _db.Assemblies
+            .Include(a => a.AssemblyPriceListItems)
+            .FirstOrDefaultAsync(a => a.Id == id);
         if (existing is null) return NotFound();
 
         existing.Name = assembly.Name;
         existing.Category = assembly.Category;
-        existing.Type = assembly.Type;
-        existing.Value = assembly.Value;
-        existing.IsDriver = assembly.IsDriver;
-        existing.PriceListId = assembly.PriceListId;
+
+        _db.AssemblyPriceLists.RemoveRange(existing.AssemblyPriceListItems);
+        existing.AssemblyPriceListItems = assembly.AssemblyPriceListItems;
 
         await _db.SaveChangesAsync();
         return NoContent();

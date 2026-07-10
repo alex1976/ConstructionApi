@@ -1,4 +1,6 @@
 using System.ComponentModel;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using ConstructionApi.McpServer.Data;
 using ConstructionApi.McpServer.Models;
 using Microsoft.EntityFrameworkCore;
@@ -36,7 +38,7 @@ public class SearchTools
             query = query.Where(p => p.Subcategory.Contains(subcategory));
 
         var results = await query.ToListAsync();
-        return System.Text.Json.JsonSerializer.Serialize(results, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
+        return JsonSerializer.Serialize(results, new JsonSerializerOptions { WriteIndented = true });
     }
 
     [McpServerTool, Description("Search assembly items by name and/or category")]
@@ -45,7 +47,7 @@ public class SearchTools
         [Description("Filter by assembly name (substring)")] string? name = null,
         [Description("Filter by category (substring)")] string? category = null)
     {
-        var query = db.Assemblies.Include(a => a.PriceList).AsQueryable();
+        var query = db.Assemblies.Include(a => a.AssemblyPriceListItems).ThenInclude(ap => ap.PriceList).AsQueryable();
 
         if (!string.IsNullOrWhiteSpace(name))
             query = query.Where(a => a.Name.Contains(name));
@@ -53,6 +55,6 @@ public class SearchTools
             query = query.Where(a => a.Category.Contains(category));
 
         var results = await query.ToListAsync();
-        return System.Text.Json.JsonSerializer.Serialize(results, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
+        return JsonSerializer.Serialize(results, new JsonSerializerOptions { WriteIndented = true, ReferenceHandler = ReferenceHandler.IgnoreCycles });
     }
 }
