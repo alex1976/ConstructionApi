@@ -9,7 +9,11 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(connectionString));
-builder.Services.AddMcpServer().WithTools<SearchTools>();
+builder.Services.AddMcpServer()
+    .WithHttpTransport()
+    .WithTools<SearchTools>()
+    .WithTools<PriceListTools>()
+    .WithTools<AssemblyTools>();
 
 var app = builder.Build();
 

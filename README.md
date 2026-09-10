@@ -1,6 +1,22 @@
 # ConstructionApi
 
+## Summary
 A .NET 9 Web API that exposes PriceList and Assemblies data from a SQLite database, seeded from a CSV file.
+the solution manages construction price list items and assemblies (bill-of-materials-style groupings of price list items), backed by a shared SQLite database. The repo contains two separate, deployable projects:
+
+- **ConstructionApi** (root) — an ASP.NET Core Web API with CRUD + search endpoints, Swagger UI, and CSV-based seeding.
+- **McpServer** ([McpServer/](McpServer/)) — a standalone MCP (Model Context Protocol) server that exposes the same data model as tools for AI agents (search + create/update/delete).
+
+Both projects read/write the same `construction.db` SQLite file but do **not** share code — each has its own `AppDbContext` and model classes that must be kept in sync manually (see Key Points).
+
+## Domain Model
+
+- **PriceList** — a single priced item: `Code`, `Description`, `Category`/`Subcategory`, `UnitOfMeasure`, `Price`, plus cost-breakdown percentages (`SafetyPercentage`, `LabourPercentage`, `MaterialPercentage`, `EquipmentPercentage`) and catalog metadata (`CatalogCode`, `CatalogDescription`, `CatalogAuthor`, `CatalogVersion`).
+- **Assembly** — a named, categorized group of price list items (`Name`, `Category`).
+- **AssemblyPriceList** — join entity (composite key `AssemblyId` + `PriceListId`) linking an Assembly to a PriceList item with:
+  - `Type`: `FixedQuantity` (Value = fixed quantity) or `QuantityFactor` (Value = multiplier of the driver quantity)
+  - `Value`: decimal quantity/factor
+  - `IsDriver`: marks the item that drives quantity for factor-based items
 
 ## Endpoints
 
