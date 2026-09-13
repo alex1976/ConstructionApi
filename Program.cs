@@ -22,8 +22,8 @@ using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     db.Database.Migrate();
-    DbInitializer.SeedPriceLists(db, Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "Samples", "test_materials.csv"));
-    DbInitializer.SeedAssemblies(db, Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "Samples", "test_assemblies.csv"));
+    DbInitializer.SeedPriceLists(db, Path.Combine(AppContext.BaseDirectory, "Samples", "test_materials.csv"));
+    DbInitializer.SeedAssemblies(db, Path.Combine(AppContext.BaseDirectory, "Samples", "test_assemblies.csv"));
 }
 
 app.Run();

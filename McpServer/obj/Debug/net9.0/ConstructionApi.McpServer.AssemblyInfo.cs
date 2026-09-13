@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConstructionApi.McpServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3f2941cccc47662f7b6134a709ba23f7e910595")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+438c1fa5b35f208507452a7b29a6029c0fea561b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConstructionApi.McpServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConstructionApi.McpServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

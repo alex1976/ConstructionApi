@@ -49,6 +49,16 @@ dotnet run                            # run Web API (Swagger at /swagger)
 dotnet run --project McpServer        # run the MCP server (endpoint at /mcp)
 ```
 
+### Docker
+
+```
+docker compose up --build             # build + run both services, sharing construction.db via the db-data volume
+```
+
+- [Dockerfile](Dockerfile) / [McpServer/Dockerfile](McpServer/Dockerfile) — multi-stage builds (SDK image → aspnet runtime image) for each project.
+- [docker-compose.yml](docker-compose.yml) — runs `api` (port 5000→8080) and `mcp-server` (port 5100→8080), both mounting the `db-data` volume at `/data` and pointing `ConnectionStrings__DefaultConnection` at `/data/construction.db`.
+- Only the `api` service runs `db.Database.Migrate()`; compose's `depends_on` only orders container start, not readiness, so the API should finish migrating/seeding before the MCP server hits the same file in practice, but there's no explicit health-gate between them.
+
 ## Reference
 
 Full endpoint/tool documentation with request/response examples lives in [README.md](README.md) and [McpServer/README.md](McpServer/README.md).

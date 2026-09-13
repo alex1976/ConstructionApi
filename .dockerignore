@@ -1,0 +1,8 @@
+bin/
+obj/
+McpServer/
+*.db
+.vs/
+.git/
+.gitignore
+*.md

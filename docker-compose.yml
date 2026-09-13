@@ -1,0 +1,27 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Data Source=/data/construction.db
+    volumes:
+      - db-data:/data
+
+  mcp-server:
+    build:
+      context: ./McpServer
+      dockerfile: Dockerfile
+    ports:
+      - "5100:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Data Source=/data/construction.db
+    volumes:
+      - db-data:/data
+    depends_on:
+      - api
+
+volumes:
+  db-data:

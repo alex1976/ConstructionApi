@@ -195,6 +195,31 @@ dotnet run
 
 The API starts on `http://localhost:{port}`. Swagger UI is available at `/swagger`.
 
+## Docker
+
+Both projects can run in containers, sharing the same `construction.db` via a Docker volume.
+
+**Build and start both services:**
+
+```
+docker compose up --build
+```
+
+- Web API: `http://localhost:5000` (Swagger at `/swagger`)
+- MCP server: `http://localhost:5100/mcp`
+
+The database lives in a named volume (`db-data`) mounted at `/data` in both containers, so it persists across `docker compose down`/`up` cycles. To reset it, run `docker compose down -v`.
+
+To build/run a single service standalone:
+
+```
+docker build -t construction-api .
+docker run -p 5000:8080 -v db-data:/data -e ConnectionStrings__DefaultConnection="Data Source=/data/construction.db" construction-api
+
+docker build -t construction-mcp-server ./McpServer
+docker run -p 5100:8080 -v db-data:/data -e ConnectionStrings__DefaultConnection="Data Source=/data/construction.db" construction-mcp-server
+```
+
 ## MCP Server
 
 The `McpServer/` folder contains a standalone MCP (Model Context Protocol) server that exposes search capabilities for AI agents over HTTP.
