@@ -1,0 +1,101 @@
+catalog code,catalog description,catalog author,catalog version,code,description,category,subcategory,unit of measure,price,safety percentage,labour percentage,material percentage,equipment percentage
+REG,Prezzario Regionale,Regione,2026,ITM0001,Electrical work item 1,MEP,Electrical,m2,387.86,5,35,50,10
+REG,Prezzario Regionale,Regione,2026,ITM0002,Painting work item 2,Finishes,Painting,kg,114.04,5,23,55,17
+REG,Prezzario Regionale,Regione,2026,ITM0003,Masonry work item 3,Structural,Masonry,kg,321.36,22,39,38,1
+REG,Prezzario Regionale,Regione,2026,ITM0004,Plumbing work item 4,MEP,Plumbing,nr,333.24,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0005,Masonry work item 5,Structural,Masonry,nr,305.7,11,38,46,5
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0006,Painting work item 6,Finishes,Painting,m3,454.33,15,16,60,9
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0007,Painting work item 7,Finishes,Painting,kg,239.54,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0008,Concrete work item 8,Structural,Concrete,kg,484.26,28,22,36,14
+REG,Prezzario Regionale,Regione,2026,ITM0009,Concrete work item 9,Structural,Concrete,m2,405.3,15,18,47,20
+REG,Prezzario Regionale,Regione,2026,ITM0010,Concrete work item 10,Structural,Concrete,m3,456.56,7,39,36,18
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0011,Masonry work item 11,Structural,Masonry,m2,431.74,43,13,31,13
+REG,Prezzario Regionale,Regione,2026,ITM0012,Masonry work item 12,Structural,Masonry,m3,116.53,38,29,22,11
+REG,Prezzario Regionale,Regione,2026,ITM0013,Flooring work item 13,Finishes,Flooring,m2,169.12,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0014,Masonry work item 14,Structural,Masonry,m3,213.64,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0015,Masonry work item 15,Structural,Masonry,m3,461.41,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0016,Plumbing work item 16,MEP,Plumbing,kg,7.04,20,25,37,18
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0017,Plumbing work item 17,MEP,Plumbing,m2,306.88,25,37,24,14
+REG,Prezzario Regionale,Regione,2026,ITM0018,Plumbing work item 18,MEP,Plumbing,h,411.22,35,27,24,14
+REG,Prezzario Regionale,Regione,2026,ITM0019,Painting work item 19,Finishes,Painting,kg,175.74,14,29,47,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0020,Flooring work item 20,Finishes,Flooring,kg,171.87,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0021,Electrical work item 21,MEP,Electrical,m2,288.3,12,33,35,20
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0022,Masonry work item 22,Structural,Masonry,nr,104.74,16,17,61,6
+REG,Prezzario Regionale,Regione,2026,ITM0023,Concrete work item 23,Structural,Concrete,m3,122.18,5,35,50,10
+REG,Prezzario Regionale,Regione,2026,ITM0024,Flooring work item 24,Finishes,Flooring,kg,69.29,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0025,Painting work item 25,Finishes,Painting,m3,101.97,27,34,34,5
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0026,Electrical work item 26,MEP,Electrical,nr,44.97,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0027,Concrete work item 27,Structural,Concrete,m2,262.64,60,13,25,2
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0028,Painting work item 28,Finishes,Painting,h,262.95,37,35,23,5
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0029,Plumbing work item 29,MEP,Plumbing,kg,475.0,38,39,22,1
+REG,Prezzario Regionale,Regione,2026,ITM0030,Flooring work item 30,Finishes,Flooring,h,157.87,5,35,50,10
+REG,Prezzario Regionale,Regione,2026,ITM0031,Masonry work item 31,Structural,Masonry,nr,381.02,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0032,Flooring work item 32,Finishes,Flooring,kg,34.09,42,14,24,20
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0033,Electrical work item 33,MEP,Electrical,m2,385.61,26,10,51,13
+REG,Prezzario Regionale,Regione,2026,ITM0034,Plumbing work item 34,MEP,Plumbing,h,372.12,15,49,21,15
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0035,Electrical work item 35,MEP,Electrical,m3,334.69,24,33,25,18
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0036,Electrical work item 36,MEP,Electrical,h,204.79,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0037,Concrete work item 37,Structural,Concrete,nr,177.61,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0038,Painting work item 38,Finishes,Painting,h,118.6,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0039,Painting work item 39,Finishes,Painting,h,18.59,11,39,34,16
+REG,Prezzario Regionale,Regione,2026,ITM0040,Painting work item 40,Finishes,Painting,h,62.56,25,39,28,8
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0041,Masonry work item 41,Structural,Masonry,m2,174.5,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0042,Concrete work item 42,Structural,Concrete,m3,100.58,9,45,34,12
+REG,Prezzario Regionale,Regione,2026,ITM0043,Electrical work item 43,MEP,Electrical,nr,271.47,5,35,50,10
+REG,Prezzario Regionale,Regione,2026,ITM0044,Electrical work item 44,MEP,Electrical,m2,109.97,5,35,50,10
+REG,Prezzario Regionale,Regione,2026,ITM0045,Painting work item 45,Finishes,Painting,m2,91.65,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0046,Masonry work item 46,Structural,Masonry,h,308.08,57,11,24,8
+REG,Prezzario Regionale,Regione,2026,ITM0047,Plumbing work item 47,MEP,Plumbing,m3,327.14,43,15,25,17
+REG,Prezzario Regionale,Regione,2026,ITM0048,Painting work item 48,Finishes,Painting,kg,248.51,5,35,50,10
+REG,Prezzario Regionale,Regione,2026,ITM0049,Electrical work item 49,MEP,Electrical,h,243.05,17,12,59,12
+REG,Prezzario Regionale,Regione,2026,ITM0050,Masonry work item 50,Structural,Masonry,kg,310.21,32,20,36,12
+REG,Prezzario Regionale,Regione,2026,ITM0051,Concrete work item 51,Structural,Concrete,m3,379.96,22,29,37,12
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0052,Electrical work item 52,MEP,Electrical,h,216.95,5,35,50,10
+REG,Prezzario Regionale,Regione,2026,ITM0053,Painting work item 53,Finishes,Painting,m2,68.67,5,35,50,10
+REG,Prezzario Regionale,Regione,2026,ITM0054,Concrete work item 54,Structural,Concrete,m2,285.99,15,53,28,4
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0055,Electrical work item 55,MEP,Electrical,kg,264.42,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0056,Concrete work item 56,Structural,Concrete,m3,30.37,10,21,49,20
+REG,Prezzario Regionale,Regione,2026,ITM0057,Concrete work item 57,Structural,Concrete,kg,173.71,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0058,Painting work item 58,Finishes,Painting,m3,247.51,24,11,56,9
+REG,Prezzario Regionale,Regione,2026,ITM0059,Electrical work item 59,MEP,Electrical,h,403.24,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0060,Concrete work item 60,Structural,Concrete,m3,459.71,44,27,28,1
+REG,Prezzario Regionale,Regione,2026,ITM0061,Concrete work item 61,Structural,Concrete,m3,92.83,12,25,57,6
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0062,Painting work item 62,Finishes,Painting,h,193.11,27,44,28,1
+REG,Prezzario Regionale,Regione,2026,ITM0063,Electrical work item 63,MEP,Electrical,m2,233.65,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0064,Concrete work item 64,Structural,Concrete,m2,5.98,19,49,25,7
+REG,Prezzario Regionale,Regione,2026,ITM0065,Plumbing work item 65,MEP,Plumbing,nr,143.15,19,27,48,6
+REG,Prezzario Regionale,Regione,2026,ITM0066,Concrete work item 66,Structural,Concrete,kg,198.75,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0067,Concrete work item 67,Structural,Concrete,kg,263.65,41,26,31,2
+REG,Prezzario Regionale,Regione,2026,ITM0068,Plumbing work item 68,MEP,Plumbing,nr,393.7,15,12,69,4
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0069,Flooring work item 69,Finishes,Flooring,nr,271.91,25,23,34,18
+REG,Prezzario Regionale,Regione,2026,ITM0070,Concrete work item 70,Structural,Concrete,m2,321.45,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0071,Flooring work item 71,Finishes,Flooring,m2,264.2,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0072,Painting work item 72,Finishes,Painting,kg,138.49,52,17,26,5
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0073,Flooring work item 73,Finishes,Flooring,h,78.86,9,55,31,5
+REG,Prezzario Regionale,Regione,2026,ITM0074,Electrical work item 74,MEP,Electrical,kg,199.5,21,15,59,5
+REG,Prezzario Regionale,Regione,2026,ITM0075,Plumbing work item 75,MEP,Plumbing,m3,253.77,38,10,38,14
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0076,Concrete work item 76,Structural,Concrete,kg,214.23,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0077,Electrical work item 77,MEP,Electrical,h,165.12,5,35,50,10
+REG,Prezzario Regionale,Regione,2026,ITM0078,Masonry work item 78,Structural,Masonry,h,441.28,38,10,42,10
+REG,Prezzario Regionale,Regione,2026,ITM0079,Flooring work item 79,Finishes,Flooring,m3,124.8,42,21,32,5
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0080,Painting work item 80,Finishes,Painting,m2,236.38,23,18,45,14
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0081,Electrical work item 81,MEP,Electrical,h,407.63,8,31,48,13
+REG,Prezzario Regionale,Regione,2026,ITM0082,Electrical work item 82,MEP,Electrical,kg,201.73,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0083,Painting work item 83,Finishes,Painting,m2,497.36,19,30,35,16
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0084,Masonry work item 84,Structural,Masonry,nr,438.17,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0085,Masonry work item 85,Structural,Masonry,m2,371.28,47,12,24,17
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0086,Painting work item 86,Finishes,Painting,nr,440.02,8,26,64,2
+REG,Prezzario Regionale,Regione,2026,ITM0087,Electrical work item 87,MEP,Electrical,m2,94.9,13,36,50,1
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0088,Plumbing work item 88,MEP,Plumbing,h,89.01,21,16,59,4
+REG,Prezzario Regionale,Regione,2026,ITM0089,Painting work item 89,Finishes,Painting,h,488.04,26,16,47,11
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0090,Flooring work item 90,Finishes,Flooring,m3,298.65,36,21,38,5
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0091,Concrete work item 91,Structural,Concrete,kg,346.63,17,14,59,10
+REG,Prezzario Regionale,Regione,2026,ITM0092,Concrete work item 92,Structural,Concrete,h,36.66,11,22,64,3
+REG,Prezzario Regionale,Regione,2026,ITM0093,Electrical work item 93,MEP,Electrical,h,433.25,28,51,20,1
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0094,Electrical work item 94,MEP,Electrical,kg,177.63,5,35,50,10
+REG,Prezzario Regionale,Regione,2026,ITM0095,Electrical work item 95,MEP,Electrical,m3,141.75,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0096,Flooring work item 96,Finishes,Flooring,h,288.72,8,54,31,7
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0097,Concrete work item 97,Structural,Concrete,nr,81.88,7,17,61,15
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0098,Electrical work item 98,MEP,Electrical,m3,6.54,5,35,50,10
+DEI,Prezziario Opere Edili,ACME,2026.1,ITM0099,Concrete work item 99,Structural,Concrete,m2,496.21,5,35,50,10
+REG,Prezzario Regionale,Regione,2026,ITM0100,Plumbing work item 100,MEP,Plumbing,m2,150.62,23,47,25,5

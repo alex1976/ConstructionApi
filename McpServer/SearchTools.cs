@@ -57,4 +57,24 @@ public class SearchTools
         var results = await query.ToListAsync();
         return JsonSerializer.Serialize(results, new JsonSerializerOptions { WriteIndented = true, ReferenceHandler = ReferenceHandler.IgnoreCycles });
     }
+
+    [McpServerTool, Description("Search phases by name, description, and/or category")]
+    public static async Task<string> SearchPhases(
+        AppDbContext db,
+        [Description("Filter by phase name (substring)")] string? name = null,
+        [Description("Filter by description (substring)")] string? description = null,
+        [Description("Filter by category (substring)")] string? category = null)
+    {
+        var query = db.Phases.Include(p => p.PhaseAssemblyListItems).ThenInclude(pa => pa.Assembly).AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(name))
+            query = query.Where(p => p.Name.Contains(name));
+        if (!string.IsNullOrWhiteSpace(description))
+            query = query.Where(p => p.Description.Contains(description));
+        if (!string.IsNullOrWhiteSpace(category))
+            query = query.Where(p => p.Category.Contains(category));
+
+        var results = await query.ToListAsync();
+        return JsonSerializer.Serialize(results, new JsonSerializerOptions { WriteIndented = true, ReferenceHandler = ReferenceHandler.IgnoreCycles });
+    }
 }

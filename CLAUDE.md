@@ -17,6 +17,8 @@ Both projects read/write the same `construction.db` SQLite file but do **not** s
   - `Type`: `FixedQuantity` (Value = fixed quantity) or `QuantityFactor` (Value = multiplier of the driver quantity)
   - `Value`: decimal quantity/factor
   - `IsDriver`: marks the item that drives quantity for factor-based items
+- **Phase** — a named, categorized construction phase (`Name`, `Description`, `Category`).
+- **PhaseAssemblyList** — join entity (composite key `PhaseId` + `AssemblyId`) linking a Phase to an Assembly with a `Quantity` of that assembly to use in the phase.
 
 ## Project Layout
 
@@ -25,8 +27,9 @@ Both projects read/write the same `construction.db` SQLite file but do **not** s
 | [Program.cs](Program.cs) | Web API startup: DI, Swagger, auto-migrate + CSV seeding on boot |
 | [Controllers/PriceListsController.cs](Controllers/PriceListsController.cs) | `/api/pricelists` — GET all, GET search, GET by id, POST, PUT (full replace), DELETE |
 | [Controllers/AssembliesController.cs](Controllers/AssembliesController.cs) | `/api/assemblies` — same CRUD shape, includes nested `AssemblyPriceListItems` |
-| [Models/](Models/) | `PriceList`, `Assembly`, `AssemblyPriceList` entity classes |
-| [Data/AppDbContext.cs](Data/AppDbContext.cs) | EF Core context; configures the composite key/relations for `AssemblyPriceList` |
+| [Controllers/PhasesController.cs](Controllers/PhasesController.cs) | `/api/phases` — same CRUD shape, includes nested `PhaseAssemblyListItems` |
+| [Models/](Models/) | `PriceList`, `Assembly`, `AssemblyPriceList`, `Phase`, `PhaseAssemblyList` entity classes |
+| [Data/AppDbContext.cs](Data/AppDbContext.cs) | EF Core context; configures the composite keys/relations for `AssemblyPriceList` and `PhaseAssemblyList` |
 | [Data/DbInitializer.cs](Data/DbInitializer.cs) | Seeds `PriceLists`/`Assemblies` from CSV on first run only (`if (db.PriceLists.Any()) return;`) |
 | [Samples/test_materials.csv](Samples/test_materials.csv), [Samples/test_assemblies.csv](Samples/test_assemblies.csv) | Seed data sources |
 | [Migrations/](Migrations/) | EF Core migrations for the shared SQLite schema |
@@ -35,7 +38,7 @@ Both projects read/write the same `construction.db` SQLite file but do **not** s
 ## Key Points / Gotchas
 
 - **Two duplicate model/DbContext sets.** [McpServer/Models/](McpServer/Models/) and [McpServer/Data/AppDbContext.cs](McpServer/Data/AppDbContext.cs) are hand-copied duplicates of the root project's, not a shared library reference. Any schema change (new field, new entity, relation change) must be applied in **both** places, and a migration only needs to be added once (from the root project) since both point at the same `construction.db`.
-- **PUT endpoints are full replacements**, not partial updates — callers must send every field. The MCP server's write tools ([McpServer/PriceListTools.cs](McpServer/PriceListTools.cs), [McpServer/AssemblyTools.cs](McpServer/AssemblyTools.cs)), by contrast, support partial updates (only provided fields change).
+- **PUT endpoints are full replacements**, not partial updates — callers must send every field. The MCP server's write tools ([McpServer/PriceListTools.cs](McpServer/PriceListTools.cs), [McpServer/AssemblyTools.cs](McpServer/AssemblyTools.cs), [McpServer/PhaseTools.cs](McpServer/PhaseTools.cs)), by contrast, support partial updates (only provided fields change).
 - **Assembly deletes of a PriceList item are guarded in the MCP server**: `DeletePriceList` refuses to delete an item referenced by assemblies unless `force=true`; the Web API's `DELETE /api/assemblies/{id}` / `/api/pricelists/{id}` have no such guard.
 - **Seeding is one-time and idempotent-by-emptiness**: `DbInitializer` only seeds if the respective table is empty, so it won't overwrite existing data on restart.
 - **Migrations auto-apply on startup** (`db.Database.Migrate()` in [Program.cs](Program.cs)) — no manual `dotnet ef database update` needed in normal dev flow, but `dotnet ef migrations add <Name>` is still required after entity changes.

@@ -13,7 +13,8 @@ builder.Services.AddMcpServer()
     .WithHttpTransport()
     .WithTools<SearchTools>()
     .WithTools<PriceListTools>()
-    .WithTools<AssemblyTools>();
+    .WithTools<AssemblyTools>()
+    .WithTools<PhaseTools>();
 
 var app = builder.Build();
 

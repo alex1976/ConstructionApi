@@ -1,7 +1,7 @@
 # ConstructionApi
 
 ## Summary
-A .NET 9 Web API that exposes PriceList and Assemblies data from a SQLite database, seeded from a CSV file.
+A .NET 9 Web API that exposes PriceList, Assemblies, and Phases data from a SQLite database, seeded from a CSV file.
 the solution manages construction price list items and assemblies (bill-of-materials-style groupings of price list items), backed by a shared SQLite database. The repo contains two separate, deployable projects:
 
 - **ConstructionApi** (root) — an ASP.NET Core Web API with CRUD + search endpoints, Swagger UI, and CSV-based seeding.
@@ -17,6 +17,8 @@ Both projects read/write the same `construction.db` SQLite file but do **not** s
   - `Type`: `FixedQuantity` (Value = fixed quantity) or `QuantityFactor` (Value = multiplier of the driver quantity)
   - `Value`: decimal quantity/factor
   - `IsDriver`: marks the item that drives quantity for factor-based items
+- **Phase** — a named, categorized construction phase: `Name`, `Description`, `Category`.
+- **PhaseAssemblyList** — join entity (composite key `PhaseId` + `AssemblyId`) linking a Phase to an Assembly with a `Quantity` of that assembly to use in the phase.
 
 ## Endpoints
 
@@ -181,6 +183,79 @@ Deletes an assembly by ID.
 DELETE /api/assemblies/1
 ```
 
+## Phase Endpoints
+
+### GET /api/phases
+Returns all phases with their referenced assemblies.
+
+```
+GET /api/phases
+```
+
+### GET /api/phases/search
+Filters phases by optional query parameters (AND logic, substring match).
+
+```
+GET /api/phases/search?category=Structural
+```
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| name | string | Filter by phase name |
+| category | string | Filter by category |
+
+### GET /api/phases/{id}
+Returns a single phase by ID.
+
+```
+GET /api/phases/1
+```
+
+### POST /api/phases
+Creates a new phase.
+
+```
+POST /api/phases
+Content-Type: application/json
+
+{
+  "name": "Foundation Works",
+  "description": "Excavation and foundation pouring",
+  "category": "Structural",
+  "phaseAssemblyListItems": [
+    { "assemblyId": 1, "quantity": 3.5 },
+    { "assemblyId": 2, "quantity": 1 }
+  ]
+}
+```
+
+Each item in `phaseAssemblyListItems` requires `assemblyId` and `quantity`.
+
+### PUT /api/phases/{id}
+Fully updates an existing phase.
+
+```
+PUT /api/phases/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Foundation Works",
+  "description": "Excavation and foundation pouring",
+  "category": "Structural",
+  "phaseAssemblyListItems": [
+    { "phaseId": 1, "assemblyId": 3, "quantity": 2.0 }
+  ]
+}
+```
+
+### DELETE /api/phases/{id}
+Deletes a phase by ID.
+
+```
+DELETE /api/phases/1
+```
+
 ## Build
 
 ```
@@ -222,7 +297,7 @@ docker run -p 5100:8080 -v db-data:/data -e ConnectionStrings__DefaultConnection
 
 ## MCP Server
 
-The `McpServer/` folder contains a standalone MCP (Model Context Protocol) server that exposes search capabilities for AI agents over HTTP.
+The `McpServer/` folder contains a standalone MCP (Model Context Protocol) server that exposes search and CRUD capabilities for AI agents over HTTP.
 
 **Run the MCP server:**
 
@@ -238,6 +313,10 @@ The MCP server listens on `http://localhost:{port}` and exposes the MCP endpoint
 |------|-------------|
 | `SearchPriceLists` | Search price list items by catalog code, catalog description, catalog author, code, description, category, subcategory |
 | `SearchAssemblies` | Search assembly items by name and/or category |
+| `SearchPhases` | Search phases by name, description, and/or category |
+| `CreatePriceList` / `UpdatePriceList` / `DeletePriceList` | Write operations on price list items |
+| `CreateAssembly` / `UpdateAssembly` / `DeleteAssembly` | Write operations on assemblies and their price list items |
+| `CreatePhase` / `UpdatePhase` / `DeletePhase` | Write operations on phases and their assemblies |
 
 Both projects share the same SQLite database (`construction.db`).
 

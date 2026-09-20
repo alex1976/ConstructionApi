@@ -36,7 +36,7 @@
 <body>
   <header>
     <h1>ConstructionApi</h1>
-    <p>REST API + MCP server for construction estimation. Manages price lists and assemblies to power agentic workflows.</p>
+    <p>REST API + MCP server for construction estimation. Manages price lists, assemblies, and phases to power agentic workflows.</p>
   </header>
 
   <div class="container">
@@ -45,12 +45,12 @@
       <div class="architecture">
         <div class="arch-box api">
           <h4>REST API</h4>
-          <p>CRUD endpoints for PriceLists &amp; Assemblies</p>
+          <p>CRUD endpoints for PriceLists, Assemblies &amp; Phases</p>
         </div>
         <span class="arrow">&#8594;</span>
         <div class="arch-box mcp">
           <h4>MCP Server</h4>
-          <p>Search tools for AI agents</p>
+          <p>Search &amp; CRUD tools for AI agents</p>
         </div>
         <span class="arrow">&#8594;</span>
         <div class="arch-box agent">
@@ -72,6 +72,11 @@
           <h3>Assembly</h3>
           <p>Package of one or more price list items with a quantity multiplier. Contains name, category, type (FixedQuantity / QuantityFactor), value, and driver flag.</p>
           <span class="tag">Package</span>
+        </div>
+        <div class="card">
+          <h3>Phase</h3>
+          <p>Construction phase grouping one or more assemblies with a quantity of each. Contains name, description, and category.</p>
+          <span class="tag">Grouping</span>
         </div>
       </div>
     </section>
@@ -95,6 +100,12 @@
           <tr><td>POST</td><td><code>/api/assemblies</code></td><td>Create assembly</td></tr>
           <tr><td>PUT</td><td><code>/api/assemblies/{id}</code></td><td>Update assembly</td></tr>
           <tr><td>DELETE</td><td><code>/api/assemblies/{id}</code></td><td>Delete assembly</td></tr>
+          <tr><td>GET</td><td><code>/api/phases</code></td><td>List all phases</td></tr>
+          <tr><td>GET</td><td><code>/api/phases/search</code></td><td>Filter by name and/or category</td></tr>
+          <tr><td>GET</td><td><code>/api/phases/{id}</code></td><td>Get single phase</td></tr>
+          <tr><td>POST</td><td><code>/api/phases</code></td><td>Create phase</td></tr>
+          <tr><td>PUT</td><td><code>/api/phases/{id}</code></td><td>Update phase</td></tr>
+          <tr><td>DELETE</td><td><code>/api/phases/{id}</code></td><td>Delete phase</td></tr>
         </tbody>
       </table>
     </section>
@@ -108,6 +119,10 @@
         <tbody>
           <tr><td><code>SearchPriceLists</code></td><td>Search price list items by catalogue code, description, author, item code, category, subcategory</td></tr>
           <tr><td><code>SearchAssemblies</code></td><td>Search assembly packages by name and/or category</td></tr>
+          <tr><td><code>SearchPhases</code></td><td>Search phases by name, description, and/or category</td></tr>
+          <tr><td><code>CreatePriceList</code> / <code>UpdatePriceList</code> / <code>DeletePriceList</code></td><td>Write operations on price list items</td></tr>
+          <tr><td><code>CreateAssembly</code> / <code>UpdateAssembly</code> / <code>DeleteAssembly</code></td><td>Write operations on assemblies</td></tr>
+          <tr><td><code>CreatePhase</code> / <code>UpdatePhase</code> / <code>DeletePhase</code></td><td>Write operations on phases</td></tr>
         </tbody>
       </table>
     </section>

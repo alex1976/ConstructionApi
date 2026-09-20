@@ -311,3 +311,5 @@ C:\Users\a.maramotti\source\repos\ConstructionApi\obj\Debug\net9.0\refint\Constr
 C:\Users\a.maramotti\source\repos\ConstructionApi\obj\Debug\net9.0\ConstructionApi.pdb
 C:\Users\a.maramotti\source\repos\ConstructionApi\obj\Debug\net9.0\ConstructionApi.genruntimeconfig.cache
 C:\Users\a.maramotti\source\repos\ConstructionApi\obj\Debug\net9.0\ref\ConstructionApi.dll
+c:\Users\a.maramotti\source\repos\ConstructionApi\bin\Debug\net9.0\Samples\test_assemblies.csv
+c:\Users\a.maramotti\source\repos\ConstructionApi\bin\Debug\net9.0\Samples\test_materials.csv

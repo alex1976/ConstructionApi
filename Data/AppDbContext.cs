@@ -10,6 +10,8 @@ public class AppDbContext : DbContext
     public DbSet<PriceList> PriceLists => Set<PriceList>();
     public DbSet<Assembly> Assemblies => Set<Assembly>();
     public DbSet<AssemblyPriceList> AssemblyPriceLists => Set<AssemblyPriceList>();
+    public DbSet<Phase> Phases => Set<Phase>();
+    public DbSet<PhaseAssemblyList> PhaseAssemblyLists => Set<PhaseAssemblyList>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -22,6 +24,17 @@ public class AppDbContext : DbContext
             entity.HasOne(e => e.PriceList)
                 .WithMany()
                 .HasForeignKey(e => e.PriceListId);
+        });
+
+        modelBuilder.Entity<PhaseAssemblyList>(entity =>
+        {
+            entity.HasKey(e => new { e.PhaseId, e.AssemblyId });
+            entity.HasOne(e => e.Phase)
+                .WithMany(p => p.PhaseAssemblyListItems)
+                .HasForeignKey(e => e.PhaseId);
+            entity.HasOne(e => e.Assembly)
+                .WithMany()
+                .HasForeignKey(e => e.AssemblyId);
         });
     }
 }

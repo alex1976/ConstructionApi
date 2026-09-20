@@ -22,6 +22,14 @@ services:
       - db-data:/data
     depends_on:
       - api
+    networks:
+      - default
+      - librechat
 
 volumes:
   db-data:
+
+networks:
+  default: {}
+  librechat:
+    external: true
