@@ -1,29 +1,31 @@
-name,category,priceListCode,type,value,isDriver
-Foundation MEP Assembly,MEP,ITM0001,FixedQuantity,2.5,true
-Foundation MEP Assembly,MEP,ITM0002,FixedQuantity,1.0,false
-Foundation MEP Assembly,MEP,ITM0003,QuantityFactor,1.5,false
-Structural Masonry Kit,Structural,ITM0003,QuantityFactor,3.0,true
-Structural Masonry Kit,Structural,ITM0005,QuantityFactor,2.0,false
-Structural Masonry Kit,Structural,ITM0011,FixedQuantity,4.0,false
-Structural Masonry Kit,Structural,ITM0012,FixedQuantity,1.5,false
-Painting Finishes Pack,Finishes,ITM0002,QuantityFactor,2.0,true
-Painting Finishes Pack,Finishes,ITM0006,FixedQuantity,1.0,false
-Painting Finishes Pack,Finishes,ITM0019,QuantityFactor,1.5,false
-Painting Finishes Pack,Finishes,ITM0048,FixedQuantity,3.0,false
-Concrete Works Bundle,Structural,ITM0008,FixedQuantity,5.0,true
-Concrete Works Bundle,Structural,ITM0009,QuantityFactor,2.0,false
-Concrete Works Bundle,Structural,ITM0010,FixedQuantity,3.0,false
-Concrete Works Bundle,Structural,ITM0023,QuantityFactor,1.0,false
-Electrical Complete,MEP,ITM0001,FixedQuantity,1.0,true
-Electrical Complete,MEP,ITM0043,QuantityFactor,4.0,false
-Electrical Complete,MEP,ITM0044,FixedQuantity,2.0,false
-Electrical Complete,MEP,ITM0045,FixedQuantity,1.5,false
-Electrical Complete,MEP,ITM0059,QuantityFactor,2.0,false
-Plumbing System,MEP,ITM0004,FixedQuantity,3.0,true
-Plumbing System,MEP,ITM0016,QuantityFactor,2.5,false
-Plumbing System,MEP,ITM0017,FixedQuantity,2.0,false
-Plumbing System,MEP,ITM0034,QuantityFactor,1.5,false
-Flooring Finishes,Finishes,ITM0013,FixedQuantity,4.0,true
-Flooring Finishes,Finishes,ITM0020,QuantityFactor,2.0,false
-Flooring Finishes,Finishes,ITM0024,FixedQuantity,3.0,false
-Flooring Finishes,Finishes,ITM0030,QuantityFactor,1.5,false
+name,category,phase
+Assemblaggio Impiantistico di Fondazione,Impiantistica,Fondazioni dirette
+Kit Muratura Strutturale,Strutturale,Tamponamenti perimetrali
+Pacchetto Finiture Pittura,Finiture,Intonaci e tinteggiature
+Insieme Opere in Calcestruzzo,Strutturale,Strutture in elevazione in cemento armato
+Impianto Elettrico Completo,Impiantistica,Impianto elettrico e cablaggi
+Impianto Idraulico,Impiantistica,Impianto idrico-sanitario
+Finiture Pavimentazione,Finiture,Pavimentazioni interne
+Allestimento e Impianti di Cantiere,Preliminari,Allestimento cantiere
+Demolizioni Strutturali,Preliminari,Demolizioni
+Scavi e Movimento Terra,Preliminari,Scavi di sbancamento
+Collaudi Impianti Finali,Preliminari,Collaudi e certificazioni finali
+Scavi di Fondazione Strutturali,Strutturale,Scavi di fondazione
+Pali di Fondazione,Strutturale,Fondazioni profonde su pali
+Struttura Metallica in Elevazione,Strutturale,Strutture in elevazione in acciaio
+Solai Interpiano in Calcestruzzo,Strutturale,Solai interpiano
+Struttura di Copertura,Strutturale,Copertura e struttura del tetto
+Tramezzature Interne in Muratura,Strutturale,Tramezzature interne
+Impianto di Illuminazione,Impiantistica,Impianto di illuminazione
+Impianto di Climatizzazione,Impiantistica,Impianto di climatizzazione e ventilazione
+Impianto Fotovoltaico,Impiantistica,Impianto fotovoltaico
+Impianto di Scarico e Fognatura,Impiantistica,Impianto di scarico e fognatura
+Impianto di Riscaldamento,Impiantistica,Impianto di riscaldamento
+Impianto Antincendio,Impiantistica,Impianto antincendio
+Impermeabilizzazioni Coperture,Finiture,Impermeabilizzazioni
+Massetti e Sottofondi,Finiture,Massetti e sottofondi
+Rivestimenti Interni,Finiture,Rivestimenti interni
+Serramenti Interni ed Esterni,Finiture,Serramenti interni ed esterni
+Falegnameria e Arredi Fissi,Finiture,Opere da falegname e arredi fissi
+Isolamento Termico a Cappotto,Finiture,Isolamento termico a cappotto
+Sistemazioni Esterne e Piazzali,Opere Esterne,Sistemazioni esterne e pavimentazioni piazzali

@@ -313,3 +313,4 @@ C:\Users\a.maramotti\source\repos\ConstructionApi\obj\Debug\net9.0\ConstructionA
 C:\Users\a.maramotti\source\repos\ConstructionApi\obj\Debug\net9.0\ref\ConstructionApi.dll
 c:\Users\a.maramotti\source\repos\ConstructionApi\bin\Debug\net9.0\Samples\test_assemblies.csv
 c:\Users\a.maramotti\source\repos\ConstructionApi\bin\Debug\net9.0\Samples\test_materials.csv
+C:\Users\a.maramotti\source\repos\ConstructionApi\bin\Debug\net9.0\Samples\test_phases.csv

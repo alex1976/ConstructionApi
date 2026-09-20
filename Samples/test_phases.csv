@@ -1,0 +1,31 @@
+name,category
+Allestimento cantiere,Preliminari
+Demolizioni,Preliminari
+Scavi di sbancamento,Preliminari
+Scavi di fondazione,Strutturale
+Fondazioni dirette,Strutturale
+Fondazioni profonde su pali,Strutturale
+Strutture in elevazione in cemento armato,Strutturale
+Strutture in elevazione in acciaio,Strutturale
+Solai interpiano,Strutturale
+Copertura e struttura del tetto,Strutturale
+Tamponamenti perimetrali,Strutturale
+Tramezzature interne,Strutturale
+Impermeabilizzazioni,Finiture
+Isolamento termico a cappotto,Finiture
+Impianto elettrico e cablaggi,Impiantistica
+Impianto di illuminazione,Impiantistica
+Impianto idrico-sanitario,Impiantistica
+Impianto di scarico e fognatura,Impiantistica
+Impianto di riscaldamento,Impiantistica
+Impianto di climatizzazione e ventilazione,Impiantistica
+Impianto antincendio,Impiantistica
+Impianto fotovoltaico,Impiantistica
+Massetti e sottofondi,Finiture
+Pavimentazioni interne,Finiture
+Rivestimenti interni,Finiture
+Intonaci e tinteggiature,Finiture
+Serramenti interni ed esterni,Finiture
+Opere da falegname e arredi fissi,Finiture
+Sistemazioni esterne e pavimentazioni piazzali,Opere Esterne
+Collaudi e certificazioni finali,Preliminari

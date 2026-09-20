@@ -36,50 +36,69 @@ public static class DbInitializer
         db.SaveChanges();
     }
 
-    public static void SeedAssemblies(AppDbContext db, string csvPath)
+    public static void SeedPhases(AppDbContext db, string csvPath)
+    {
+        if (db.Phases.Any()) return;
+
+        var lines = File.ReadAllLines(csvPath);
+        var records = lines.Skip(1).Select(line =>
+        {
+            var fields = line.Split(',');
+            return new Phase
+            {
+                Name = fields[0],
+                Category = fields[1]
+            };
+        });
+
+        db.Phases.AddRange(records);
+        db.SaveChanges();
+    }
+
+    public static void SeedAssemblies(AppDbContext db, string assembliesCsvPath, string materialsCsvPath)
     {
         if (db.Assemblies.Any()) return;
 
+        var phaseByName = db.Phases.ToDictionary(p => p.Name);
         var priceListByCode = db.PriceLists.ToDictionary(p => p.Code);
 
-        var lines = File.ReadAllLines(csvPath);
-        var rows = lines.Skip(1).Select(line =>
+        var assemblyByName = File.ReadAllLines(assembliesCsvPath).Skip(1).Select(line =>
         {
             var fields = line.Split(',');
-            return new
+            return new Assembly
             {
                 Name = fields[0],
-                Category = fields[1],
-                PriceListCode = fields[2],
-                Type = Enum.Parse<AssemblyItemType>(fields[3]),
-                Value = decimal.Parse(fields[4], CultureInfo.InvariantCulture),
-                IsDriver = bool.Parse(fields[5])
+                Category = fields[1]
             };
-        }).ToList();
+        }).ToDictionary(a => a.Name);
 
-        var groups = rows.GroupBy(r => new { r.Name, r.Category });
+        db.Assemblies.AddRange(assemblyByName.Values);
 
-        foreach (var group in groups)
+        foreach (var line in File.ReadAllLines(assembliesCsvPath).Skip(1))
         {
-            var assembly = new Assembly
+            var fields = line.Split(',');
+            db.PhaseAssemblyLists.Add(new PhaseAssemblyList
             {
-                Name = group.Key.Name,
-                Category = group.Key.Category
-            };
+                Phase = phaseByName[fields[2]],
+                Assembly = assemblyByName[fields[0]],
+                Quantity = 1
+            });
+        }
 
-            foreach (var row in group)
+        foreach (var line in File.ReadAllLines(materialsCsvPath).Skip(1))
+        {
+            var fields = line.Split(',');
+            var assemblyName = fields[14];
+            if (string.IsNullOrWhiteSpace(assemblyName)) continue;
+
+            assemblyByName[assemblyName].AssemblyPriceListItems.Add(new AssemblyPriceList
             {
-                assembly.AssemblyPriceListItems.Add(new AssemblyPriceList
-                {
-                    Assembly = assembly,
-                    PriceList = priceListByCode[row.PriceListCode],
-                    Type = row.Type,
-                    Value = row.Value,
-                    IsDriver = row.IsDriver
-                });
-            }
-
-            db.Assemblies.Add(assembly);
+                Assembly = assemblyByName[assemblyName],
+                PriceList = priceListByCode[fields[4]],
+                Type = Enum.Parse<AssemblyItemType>(fields[15]),
+                Value = decimal.Parse(fields[16], CultureInfo.InvariantCulture),
+                IsDriver = bool.Parse(fields[17])
+            });
         }
 
         db.SaveChanges();
