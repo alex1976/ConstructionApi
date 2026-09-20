@@ -1,83 +1,83 @@
 catalog code,catalog description,catalog author,catalog version,code,description,category,subcategory,unit of measure,price,safety percentage,labour percentage,material percentage,equipment percentage,assembly,type,value,isDriver
-AZI,Listino Aziendale,AMConstruction,2026,ITM0001,Lavoro elettrico 1,Impiantistica,Elettrico,m2,387.86,5,35,50,10,Assemblaggio Impiantistico di Fondazione,FixedQuantity,2.5,true
-AZI,Listino Aziendale,AMConstruction,2026,ITM0002,Lavoro di pittura 2,Finiture,Pittura,kg,114.04,5,23,55,17,Pacchetto Finiture Pittura,QuantityFactor,2.0,true
-AZI,Listino Aziendale,AMConstruction,2026,ITM0003,Lavoro di muratura 3,Strutturale,Muratura,kg,321.36,22,39,38,1,Kit Muratura Strutturale,QuantityFactor,3.0,true
-AZI,Listino Aziendale,AMConstruction,2026,ITM0004,Lavoro idraulico 4,Impiantistica,Idraulico,nr,333.24,5,35,50,10,Impianto Idraulico,FixedQuantity,3.0,true
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0005,Lavoro di muratura 5,Strutturale,Muratura,nr,305.7,11,38,46,5,Kit Muratura Strutturale,QuantityFactor,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0006,Lavoro di pittura 6,Finiture,Pittura,m3,454.33,15,16,60,9,Pacchetto Finiture Pittura,FixedQuantity,1.0,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0007,Lavoro di pittura 7,Finiture,Pittura,kg,239.54,5,35,50,10,Rivestimenti Interni,FixedQuantity,2.0,true
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0008,Lavoro in calcestruzzo 8,Strutturale,Calcestruzzo,kg,484.26,28,22,36,14,Insieme Opere in Calcestruzzo,FixedQuantity,5.0,true
-AZI,Listino Aziendale,AMConstruction,2026,ITM0009,Lavoro in calcestruzzo 9,Strutturale,Calcestruzzo,m2,405.3,15,18,47,20,Insieme Opere in Calcestruzzo,QuantityFactor,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0010,Lavoro in calcestruzzo 10,Strutturale,Calcestruzzo,m3,456.56,7,39,36,18,Insieme Opere in Calcestruzzo,FixedQuantity,3.0,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0011,Lavoro di muratura 11,Strutturale,Muratura,m2,431.74,43,13,31,13,Kit Muratura Strutturale,FixedQuantity,4.0,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0012,Lavoro di muratura 12,Strutturale,Muratura,m3,116.53,38,29,22,11,Kit Muratura Strutturale,FixedQuantity,1.5,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0013,Lavoro di pavimentazione 13,Finiture,Pavimentazione,m2,169.12,5,35,50,10,Finiture Pavimentazione,FixedQuantity,4.0,true
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0014,Lavoro di muratura 14,Strutturale,Muratura,m3,213.64,5,35,50,10,Demolizioni Strutturali,FixedQuantity,1.0,true
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0015,Lavoro di muratura 15,Strutturale,Muratura,m3,461.41,5,35,50,10,Demolizioni Strutturali,QuantityFactor,1.5,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0016,Lavoro idraulico 16,Impiantistica,Idraulico,kg,7.04,20,25,37,18,Impianto Idraulico,QuantityFactor,2.5,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0017,Lavoro idraulico 17,Impiantistica,Idraulico,m2,306.88,25,37,24,14,Impianto Idraulico,FixedQuantity,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0018,Lavoro idraulico 18,Impiantistica,Idraulico,h,411.22,35,27,24,14,Collaudi Impianti Finali,FixedQuantity,1.0,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0019,Lavoro di pittura 19,Finiture,Pittura,kg,175.74,14,29,47,10,Pacchetto Finiture Pittura,QuantityFactor,1.5,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0020,Lavoro di pavimentazione 20,Finiture,Pavimentazione,kg,171.87,5,35,50,10,Finiture Pavimentazione,QuantityFactor,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0021,Lavoro elettrico 21,Impiantistica,Elettrico,m2,288.3,12,33,35,20,Assemblaggio Impiantistico di Fondazione,FixedQuantity,1.0,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0022,Lavoro di muratura 22,Strutturale,Muratura,nr,104.74,16,17,61,6,Struttura Metallica in Elevazione,FixedQuantity,1.0,true
-AZI,Listino Aziendale,AMConstruction,2026,ITM0023,Lavoro in calcestruzzo 23,Strutturale,Calcestruzzo,m3,122.18,5,35,50,10,Insieme Opere in Calcestruzzo,QuantityFactor,1.0,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0024,Lavoro di pavimentazione 24,Finiture,Pavimentazione,kg,69.29,5,35,50,10,Finiture Pavimentazione,FixedQuantity,3.0,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0025,Lavoro di pittura 25,Finiture,Pittura,m3,101.97,27,34,34,5,Rivestimenti Interni,FixedQuantity,1.5,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0026,Lavoro elettrico 26,Impiantistica,Elettrico,nr,44.97,5,35,50,10,Allestimento e Impianti di Cantiere,FixedQuantity,1.0,true
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0027,Lavoro in calcestruzzo 27,Strutturale,Calcestruzzo,m2,262.64,60,13,25,2,Scavi e Movimento Terra,FixedQuantity,1.0,true
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0028,Lavoro di pittura 28,Finiture,Pittura,h,262.95,37,35,23,5,Serramenti Interni ed Esterni,FixedQuantity,1.0,true
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0029,Lavoro idraulico 29,Impiantistica,Idraulico,kg,475.0,38,39,22,1,Impianto di Scarico e Fognatura,FixedQuantity,2.0,true
-AZI,Listino Aziendale,AMConstruction,2026,ITM0030,Lavoro di pavimentazione 30,Finiture,Pavimentazione,h,157.87,5,35,50,10,Finiture Pavimentazione,QuantityFactor,1.5,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0031,Lavoro di muratura 31,Strutturale,Muratura,nr,381.02,5,35,50,10,Struttura Metallica in Elevazione,FixedQuantity,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0032,Lavoro di pavimentazione 32,Finiture,Pavimentazione,kg,34.09,42,14,24,20,Impermeabilizzazioni Coperture,FixedQuantity,1.0,true
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0033,Lavoro elettrico 33,Impiantistica,Elettrico,m2,385.61,26,10,51,13,Allestimento e Impianti di Cantiere,FixedQuantity,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0034,Lavoro idraulico 34,Impiantistica,Idraulico,h,372.12,15,49,21,15,Impianto Idraulico,QuantityFactor,1.5,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0035,Lavoro elettrico 35,Impiantistica,Elettrico,m3,334.69,24,33,25,18,Impianto di Illuminazione,FixedQuantity,1.0,true
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0036,Lavoro elettrico 36,Impiantistica,Elettrico,h,204.79,5,35,50,10,Impianto di Illuminazione,FixedQuantity,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0037,Lavoro in calcestruzzo 37,Strutturale,Calcestruzzo,nr,177.61,5,35,50,10,Scavi e Movimento Terra,QuantityFactor,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0038,Lavoro di pittura 38,Finiture,Pittura,h,118.6,5,35,50,10,Serramenti Interni ed Esterni,FixedQuantity,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0039,Lavoro di pittura 39,Finiture,Pittura,h,18.59,11,39,34,16,Falegnameria e Arredi Fissi,FixedQuantity,1.0,true
-AZI,Listino Aziendale,AMConstruction,2026,ITM0040,Lavoro di pittura 40,Finiture,Pittura,h,62.56,25,39,28,8,Falegnameria e Arredi Fissi,QuantityFactor,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0041,Lavoro di muratura 41,Strutturale,Muratura,m2,174.5,5,35,50,10,Tramezzature Interne in Muratura,QuantityFactor,2.5,true
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0042,Lavoro in calcestruzzo 42,Strutturale,Calcestruzzo,m3,100.58,9,45,34,12,Scavi di Fondazione Strutturali,FixedQuantity,2.0,true
-AZI,Listino Aziendale,AMConstruction,2026,ITM0043,Lavoro elettrico 43,Impiantistica,Elettrico,nr,271.47,5,35,50,10,Impianto Elettrico Completo,FixedQuantity,1.0,true
-AZI,Listino Aziendale,AMConstruction,2026,ITM0044,Lavoro elettrico 44,Impiantistica,Elettrico,m2,109.97,5,35,50,10,Impianto Elettrico Completo,FixedQuantity,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0045,Lavoro di pittura 45,Finiture,Pittura,m2,91.65,5,35,50,10,Impianto Elettrico Completo,FixedQuantity,1.5,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0046,Lavoro di muratura 46,Strutturale,Muratura,h,308.08,57,11,24,8,Tramezzature Interne in Muratura,FixedQuantity,1.0,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0047,Lavoro idraulico 47,Impiantistica,Idraulico,m3,327.14,43,15,25,17,Impianto di Scarico e Fognatura,QuantityFactor,1.5,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0048,Lavoro di pittura 48,Finiture,Pittura,kg,248.51,5,35,50,10,Pacchetto Finiture Pittura,FixedQuantity,3.0,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0049,Lavoro elettrico 49,Impiantistica,Elettrico,h,243.05,17,12,59,12,Collaudi Impianti Finali,FixedQuantity,1.0,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0001,Predisposizione tubazioni corrugate sottofondazione,Impiantistica,Predisposizioni Impianti,m2,387.86,5,35,50,10,Assemblaggio Impiantistico di Fondazione,FixedQuantity,2.5,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0002,Idropittura lavabile per interni,Finiture,Pittura,kg,114.04,5,23,55,17,Pacchetto Finiture Pittura,QuantityFactor,2.0,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0003,Blocco laterizio forato 25x25x50 cm,Strutturale,Muratura,kg,321.36,22,39,38,1,Kit Muratura Strutturale,QuantityFactor,3.0,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0004,Tubazione multistrato per acqua sanitaria,Impiantistica,Idraulico,nr,333.24,5,35,50,10,Impianto Idraulico,FixedQuantity,3.0,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0005,Blocco termico Poroton per tamponamento,Strutturale,Muratura,nr,305.7,11,38,46,5,Kit Muratura Strutturale,QuantityFactor,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0006,Primer fissativo murale traspirante,Finiture,Pittura,m3,454.33,15,16,60,9,Pacchetto Finiture Pittura,FixedQuantity,1.0,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0007,Rivestimento in piastrelle ceramiche per bagno,Finiture,Rivestimenti,kg,239.54,5,35,50,10,Rivestimenti Interni,FixedQuantity,2.0,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0008,Calcestruzzo REV C25/30,Strutturale,Calcestruzzo,kg,484.26,28,22,36,14,Insieme Opere in Calcestruzzo,FixedQuantity,5.0,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0009,Acciaio per cemento armato B450C,Strutturale,Calcestruzzo,m2,405.3,15,18,47,20,Insieme Opere in Calcestruzzo,QuantityFactor,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0010,Cassaforma modulare per pilastri in c.a.,Strutturale,Calcestruzzo,m3,456.56,7,39,36,18,Insieme Opere in Calcestruzzo,FixedQuantity,3.0,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0011,Malta cementizia per muratura portante,Strutturale,Muratura,m2,431.74,43,13,31,13,Kit Muratura Strutturale,FixedQuantity,4.0,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0012,Architrave prefabbricato in cemento armato,Strutturale,Muratura,m3,116.53,38,29,22,11,Kit Muratura Strutturale,FixedQuantity,1.5,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0013,Piastrella in gres porcellanato 60x60,Finiture,Pavimentazione,m2,169.12,5,35,50,10,Finiture Pavimentazione,FixedQuantity,4.0,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0014,Demolizione muratura portante con mezzi meccanici,Strutturale,Demolizioni,m3,213.64,5,35,50,10,Demolizioni Strutturali,FixedQuantity,1.0,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0015,Smaltimento macerie in discarica autorizzata,Strutturale,Demolizioni,m3,461.41,5,35,50,10,Demolizioni Strutturali,QuantityFactor,1.5,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0016,Collettore idraulico complanare,Impiantistica,Idraulico,kg,7.04,20,25,37,18,Impianto Idraulico,QuantityFactor,2.5,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0017,Miscelatore monocomando per lavabo,Impiantistica,Idraulico,m2,306.88,25,37,24,14,Impianto Idraulico,FixedQuantity,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0018,Collaudo impianto idraulico e prova di tenuta,Impiantistica,Collaudi,h,411.22,35,27,24,14,Collaudi Impianti Finali,FixedQuantity,1.0,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0019,Stucco in pasta per rasatura pareti,Finiture,Pittura,kg,175.74,14,29,47,10,Pacchetto Finiture Pittura,QuantityFactor,1.5,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0020,Adesivo cementizio per posa piastrelle,Finiture,Pavimentazione,kg,171.87,5,35,50,10,Finiture Pavimentazione,QuantityFactor,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0021,Pozzetto di ispezione prefabbricato in cemento,Impiantistica,Predisposizioni Impianti,m2,288.3,12,33,35,20,Assemblaggio Impiantistico di Fondazione,FixedQuantity,1.0,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0022,Trave IPE in acciaio zincato,Strutturale,Struttura Metallica,nr,104.74,16,17,61,6,Struttura Metallica in Elevazione,FixedQuantity,1.0,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0023,Additivo superfluidificante per calcestruzzo,Strutturale,Calcestruzzo,m3,122.18,5,35,50,10,Insieme Opere in Calcestruzzo,QuantityFactor,1.0,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0024,Battiscopa in gres porcellanato,Finiture,Pavimentazione,kg,69.29,5,35,50,10,Finiture Pavimentazione,FixedQuantity,3.0,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0025,Carta da parati decorativa per interni,Finiture,Rivestimenti,m3,101.97,27,34,34,5,Rivestimenti Interni,FixedQuantity,1.5,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0026,Quadro elettrico da cantiere ASC,Impiantistica,Cantiere,nr,44.97,5,35,50,10,Allestimento e Impianti di Cantiere,FixedQuantity,1.0,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0027,Scavo di sbancamento con mezzi meccanici,Strutturale,Scavi,m2,262.64,60,13,25,2,Scavi e Movimento Terra,FixedQuantity,1.0,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0028,Serramento in PVC con doppio vetro camera,Finiture,Serramenti,h,262.95,37,35,23,5,Serramenti Interni ed Esterni,FixedQuantity,1.0,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0029,Tubazione in PVC per scarico fognario,Impiantistica,Fognatura,kg,475.0,38,39,22,1,Impianto di Scarico e Fognatura,FixedQuantity,2.0,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0030,Parquet prefinito in rovere,Finiture,Pavimentazione,h,157.87,5,35,50,10,Finiture Pavimentazione,QuantityFactor,1.5,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0031,Bullonatura strutturale ad alta resistenza,Strutturale,Struttura Metallica,nr,381.02,5,35,50,10,Struttura Metallica in Elevazione,FixedQuantity,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0032,Membrana impermeabilizzante bituminosa,Finiture,Impermeabilizzazioni,kg,34.09,42,14,24,20,Impermeabilizzazioni Coperture,FixedQuantity,1.0,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0033,Faro di cantiere a LED,Impiantistica,Cantiere,m2,385.61,26,10,51,13,Allestimento e Impianti di Cantiere,FixedQuantity,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0034,Sanitario in ceramica sospeso,Impiantistica,Idraulico,h,372.12,15,49,21,15,Impianto Idraulico,QuantityFactor,1.5,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0035,Plafoniera LED da incasso 24W,Impiantistica,Illuminazione,m3,334.69,24,33,25,18,Impianto di Illuminazione,FixedQuantity,1.0,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0036,Faretto orientabile a LED,Impiantistica,Illuminazione,h,204.79,5,35,50,10,Impianto di Illuminazione,FixedQuantity,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0037,Trasporto a discarica di terre e rocce da scavo,Strutturale,Scavi,nr,177.61,5,35,50,10,Scavi e Movimento Terra,QuantityFactor,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0038,Porta interna in legno tamburata,Finiture,Serramenti,h,118.6,5,35,50,10,Serramenti Interni ed Esterni,FixedQuantity,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0039,Armadio a muro su misura in legno,Finiture,Falegnameria,h,18.59,11,39,34,16,Falegnameria e Arredi Fissi,FixedQuantity,1.0,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0040,Mensola in legno per arredo fisso,Finiture,Falegnameria,h,62.56,25,39,28,8,Falegnameria e Arredi Fissi,QuantityFactor,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0041,Blocco forato 8x25x50 per tramezzi,Strutturale,Muratura,m2,174.5,5,35,50,10,Tramezzature Interne in Muratura,QuantityFactor,2.5,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0042,Scavo a sezione obbligata per plinti di fondazione,Strutturale,Fondazioni,m3,100.58,9,45,34,12,Scavi di Fondazione Strutturali,FixedQuantity,2.0,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0043,Quadro elettrico generale da incasso,Impiantistica,Elettrico,nr,271.47,5,35,50,10,Impianto Elettrico Completo,FixedQuantity,1.0,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0044,Cavo elettrico FG16OR16 3x2.5 mmq,Impiantistica,Elettrico,m2,109.97,5,35,50,10,Impianto Elettrico Completo,FixedQuantity,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0045,Presa civile 10/16A da incasso,Impiantistica,Elettrico,m2,91.65,5,35,50,10,Impianto Elettrico Completo,FixedQuantity,1.5,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0046,Rasatura e stuccatura giunti tramezzo,Strutturale,Muratura,h,308.08,57,11,24,8,Tramezzature Interne in Muratura,FixedQuantity,1.0,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0047,Pozzetto sifonato per scarico acque nere,Impiantistica,Fognatura,m3,327.14,43,15,25,17,Impianto di Scarico e Fognatura,QuantityFactor,1.5,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0048,Idropittura murale per esterni,Finiture,Pittura,kg,248.51,5,35,50,10,Pacchetto Finiture Pittura,FixedQuantity,3.0,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0049,Collaudo impianto elettrico e certificazione,Impiantistica,Collaudi,h,243.05,17,12,59,12,Collaudi Impianti Finali,FixedQuantity,1.0,true
 AZI,Listino Aziendale,AMConstruction,2026,ITM0050,Lavoro di muratura 50,Strutturale,Muratura,kg,310.21,32,20,36,12,,,,
-AZI,Listino Aziendale,AMConstruction,2026,ITM0051,Lavoro in calcestruzzo 51,Strutturale,Calcestruzzo,m3,379.96,22,29,37,12,Scavi di Fondazione Strutturali,QuantityFactor,1.5,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0052,Lavoro elettrico 52,Impiantistica,Elettrico,h,216.95,5,35,50,10,Impianto di Climatizzazione,FixedQuantity,2.0,true
-AZI,Listino Aziendale,AMConstruction,2026,ITM0053,Lavoro di pittura 53,Finiture,Pittura,m2,68.67,5,35,50,10,Isolamento Termico a Cappotto,FixedQuantity,2.5,true
-AZI,Listino Aziendale,AMConstruction,2026,ITM0054,Lavoro in calcestruzzo 54,Strutturale,Calcestruzzo,m2,285.99,15,53,28,4,Pali di Fondazione,FixedQuantity,3.0,true
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0055,Lavoro elettrico 55,Impiantistica,Elettrico,kg,264.42,5,35,50,10,Impianto di Climatizzazione,QuantityFactor,1.5,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0056,Lavoro in calcestruzzo 56,Strutturale,Calcestruzzo,m3,30.37,10,21,49,20,Pali di Fondazione,QuantityFactor,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0057,Lavoro in calcestruzzo 57,Strutturale,Calcestruzzo,kg,173.71,5,35,50,10,Solai Interpiano in Calcestruzzo,FixedQuantity,4.0,true
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0058,Lavoro di pittura 58,Finiture,Pittura,m3,247.51,24,11,56,9,Isolamento Termico a Cappotto,FixedQuantity,1.0,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0059,Lavoro elettrico 59,Impiantistica,Elettrico,h,403.24,5,35,50,10,Impianto Elettrico Completo,QuantityFactor,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0060,Lavoro in calcestruzzo 60,Strutturale,Calcestruzzo,m3,459.71,44,27,28,1,Solai Interpiano in Calcestruzzo,QuantityFactor,1.5,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0061,Lavoro in calcestruzzo 61,Strutturale,Calcestruzzo,m3,92.83,12,25,57,6,Struttura di Copertura,FixedQuantity,3.0,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0051,Magrone di sottofondazione,Strutturale,Fondazioni,m3,379.96,22,29,37,12,Scavi di Fondazione Strutturali,QuantityFactor,1.5,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0052,Unità split inverter per climatizzazione,Impiantistica,Climatizzazione,h,216.95,5,35,50,10,Impianto di Climatizzazione,FixedQuantity,2.0,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0053,Pannello isolante in EPS per cappotto termico,Finiture,Isolamento Termico,m2,68.67,5,35,50,10,Isolamento Termico a Cappotto,FixedQuantity,2.5,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0054,Palo trivellato in cemento armato diametro 60 cm,Strutturale,Fondazioni,m2,285.99,15,53,28,4,Pali di Fondazione,FixedQuantity,3.0,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0055,Canalizzazione per ventilazione meccanica controllata,Impiantistica,Climatizzazione,kg,264.42,5,35,50,10,Impianto di Climatizzazione,QuantityFactor,1.5,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0056,Micropalo tipo Tubfix,Strutturale,Fondazioni,m3,30.37,10,21,49,20,Pali di Fondazione,QuantityFactor,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0057,Solaio in laterocemento con travetti tralicciati,Strutturale,Calcestruzzo,kg,173.71,5,35,50,10,Solai Interpiano in Calcestruzzo,FixedQuantity,4.0,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0058,Rasante armato per cappotto termico,Finiture,Isolamento Termico,m3,247.51,24,11,56,9,Isolamento Termico a Cappotto,FixedQuantity,1.0,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0059,Interruttore magnetotermico differenziale,Impiantistica,Elettrico,h,403.24,5,35,50,10,Impianto Elettrico Completo,QuantityFactor,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0060,Rete elettrosaldata per solaio,Strutturale,Calcestruzzo,m3,459.71,44,27,28,1,Solai Interpiano in Calcestruzzo,QuantityFactor,1.5,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0061,Capriata in legno lamellare,Strutturale,Copertura,m3,92.83,12,25,57,6,Struttura di Copertura,FixedQuantity,3.0,true
 AZI,Listino Aziendale,AMConstruction,2026.1,ITM0062,Lavoro di pittura 62,Finiture,Pittura,h,193.11,27,44,28,1,,,,
-AZI,Listino Aziendale,AMConstruction,2026,ITM0063,Lavoro elettrico 63,Impiantistica,Elettrico,m2,233.65,5,35,50,10,Impianto Fotovoltaico,FixedQuantity,1.0,true
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0064,Lavoro in calcestruzzo 64,Strutturale,Calcestruzzo,m2,5.98,19,49,25,7,Struttura di Copertura,FixedQuantity,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0065,Lavoro idraulico 65,Impiantistica,Idraulico,nr,143.15,19,27,48,6,Impianto di Riscaldamento,FixedQuantity,3.0,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0063,Pannello fotovoltaico monocristallino 400W,Impiantistica,Fotovoltaico,m2,233.65,5,35,50,10,Impianto Fotovoltaico,FixedQuantity,1.0,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0064,Tegola in laterizio tipo portoghese,Strutturale,Copertura,m2,5.98,19,49,25,7,Struttura di Copertura,FixedQuantity,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0065,Caldaia a condensazione murale,Impiantistica,Riscaldamento,nr,143.15,19,27,48,6,Impianto di Riscaldamento,FixedQuantity,3.0,true
 AZI,Listino Aziendale,AMConstruction,2026,ITM0066,Lavoro in calcestruzzo 66,Strutturale,Calcestruzzo,kg,198.75,5,35,50,10,,,,
 AZI,Listino Aziendale,AMConstruction,2026.1,ITM0067,Lavoro in calcestruzzo 67,Strutturale,Calcestruzzo,kg,263.65,41,26,31,2,,,,
-AZI,Listino Aziendale,AMConstruction,2026,ITM0068,Lavoro idraulico 68,Impiantistica,Idraulico,nr,393.7,15,12,69,4,Impianto di Riscaldamento,FixedQuantity,2.0,false
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0069,Lavoro di pavimentazione 69,Finiture,Pavimentazione,nr,271.91,25,23,34,18,Impermeabilizzazioni Coperture,FixedQuantity,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0068,Radiatore in alluminio a elementi,Impiantistica,Riscaldamento,nr,393.7,15,12,69,4,Impianto di Riscaldamento,FixedQuantity,2.0,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0069,Guaina liquida cementizia per impermeabilizzazione,Finiture,Impermeabilizzazioni,nr,271.91,25,23,34,18,Impermeabilizzazioni Coperture,FixedQuantity,2.0,false
 AZI,Listino Aziendale,AMConstruction,2026,ITM0070,Lavoro in calcestruzzo 70,Strutturale,Calcestruzzo,m2,321.45,5,35,50,10,,,,
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0071,Lavoro di pavimentazione 71,Finiture,Pavimentazione,m2,264.2,5,35,50,10,Massetti e Sottofondi,FixedQuantity,3.0,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0071,Massetto autolivellante per pavimenti,Finiture,Massetti,m2,264.2,5,35,50,10,Massetti e Sottofondi,FixedQuantity,3.0,true
 AZI,Listino Aziendale,AMConstruction,2026.1,ITM0072,Lavoro di pittura 72,Finiture,Pittura,kg,138.49,52,17,26,5,,,,
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0073,Lavoro di pavimentazione 73,Finiture,Pavimentazione,h,78.86,9,55,31,5,Massetti e Sottofondi,QuantityFactor,1.5,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0074,Lavoro elettrico 74,Impiantistica,Elettrico,kg,199.5,21,15,59,5,Impianto Fotovoltaico,FixedQuantity,3.0,false
-AZI,Listino Aziendale,AMConstruction,2026,ITM0075,Lavoro idraulico 75,Impiantistica,Idraulico,m3,253.77,38,10,38,14,Impianto Antincendio,FixedQuantity,4.0,true
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0073,Massetto alleggerito per isolamento acustico,Finiture,Massetti,h,78.86,9,55,31,5,Massetti e Sottofondi,QuantityFactor,1.5,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0074,Inverter di stringa per impianto fotovoltaico,Impiantistica,Fotovoltaico,kg,199.5,21,15,59,5,Impianto Fotovoltaico,FixedQuantity,3.0,false
+AZI,Listino Aziendale,AMConstruction,2026,ITM0075,Naspo antincendio UNI 45,Impiantistica,Antincendio,m3,253.77,38,10,38,14,Impianto Antincendio,FixedQuantity,4.0,true
 AZI,Listino Aziendale,AMConstruction,2026.1,ITM0076,Lavoro in calcestruzzo 76,Strutturale,Calcestruzzo,kg,214.23,5,35,50,10,,,,
 AZI,Listino Aziendale,AMConstruction,2026.1,ITM0077,Lavoro elettrico 77,Impiantistica,Elettrico,h,165.12,5,35,50,10,,,,
 AZI,Listino Aziendale,AMConstruction,2026,ITM0078,Lavoro di muratura 78,Strutturale,Muratura,h,441.28,38,10,42,10,,,,
-AZI,Listino Aziendale,AMConstruction,2026,ITM0079,Lavoro di pavimentazione 79,Finiture,Pavimentazione,m3,124.8,42,21,32,5,Sistemazioni Esterne e Piazzali,FixedQuantity,3.0,true
+AZI,Listino Aziendale,AMConstruction,2026,ITM0079,Pavimentazione in autobloccanti per esterni,Finiture,Pavimentazione Esterna,m3,124.8,42,21,32,5,Sistemazioni Esterne e Piazzali,FixedQuantity,3.0,true
 AZI,Listino Aziendale,AMConstruction,2026.1,ITM0080,Lavoro di pittura 80,Finiture,Pittura,m2,236.38,23,18,45,14,,,,
 AZI,Listino Aziendale,AMConstruction,2026.1,ITM0081,Lavoro elettrico 81,Impiantistica,Elettrico,h,407.63,8,31,48,13,,,,
 AZI,Listino Aziendale,AMConstruction,2026,ITM0082,Lavoro elettrico 82,Impiantistica,Elettrico,kg,201.73,5,35,50,10,,,,
@@ -86,9 +86,9 @@ AZI,Listino Aziendale,AMConstruction,2026.1,ITM0084,Lavoro di muratura 84,Strutt
 AZI,Listino Aziendale,AMConstruction,2026.1,ITM0085,Lavoro di muratura 85,Strutturale,Muratura,m2,371.28,47,12,24,17,,,,
 AZI,Listino Aziendale,AMConstruction,2026.1,ITM0086,Lavoro di pittura 86,Finiture,Pittura,nr,440.02,8,26,64,2,,,,
 AZI,Listino Aziendale,AMConstruction,2026,ITM0087,Lavoro elettrico 87,Impiantistica,Elettrico,m2,94.9,13,36,50,1,,,,
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0088,Lavoro idraulico 88,Impiantistica,Idraulico,h,89.01,21,16,59,4,Impianto Antincendio,QuantityFactor,1.5,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0088,Rilevatore di fumo per impianto antincendio,Impiantistica,Antincendio,h,89.01,21,16,59,4,Impianto Antincendio,QuantityFactor,1.5,false
 AZI,Listino Aziendale,AMConstruction,2026,ITM0089,Lavoro di pittura 89,Finiture,Pittura,h,488.04,26,16,47,11,,,,
-AZI,Listino Aziendale,AMConstruction,2026.1,ITM0090,Lavoro di pavimentazione 90,Finiture,Pavimentazione,m3,298.65,36,21,38,5,Sistemazioni Esterne e Piazzali,QuantityFactor,1.5,false
+AZI,Listino Aziendale,AMConstruction,2026.1,ITM0090,Cordolo prefabbricato in cemento per bordure,Finiture,Pavimentazione Esterna,m3,298.65,36,21,38,5,Sistemazioni Esterne e Piazzali,QuantityFactor,1.5,false
 AZI,Listino Aziendale,AMConstruction,2026.1,ITM0091,Lavoro in calcestruzzo 91,Strutturale,Calcestruzzo,kg,346.63,17,14,59,10,,,,
 AZI,Listino Aziendale,AMConstruction,2026,ITM0092,Lavoro in calcestruzzo 92,Strutturale,Calcestruzzo,h,36.66,11,22,64,3,,,,
 AZI,Listino Aziendale,AMConstruction,2026,ITM0093,Lavoro elettrico 93,Impiantistica,Elettrico,h,433.25,28,51,20,1,,,,

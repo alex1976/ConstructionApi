@@ -30,17 +30,15 @@ public class AssembliesController : ControllerBase
         [FromQuery] string? name = null,
         [FromQuery] string? category = null)
     {
-        var query = _db.Assemblies
+        var items = await _db.Assemblies
             .Include(a => a.AssemblyPriceListItems)
             .ThenInclude(ap => ap.PriceList)
-            .AsQueryable();
+            .ToListAsync();
 
-        if (!string.IsNullOrWhiteSpace(name))
-            query = query.Where(a => a.Name.Contains(name));
-        if (!string.IsNullOrWhiteSpace(category))
-            query = query.Where(a => a.Category.Contains(category));
-
-        return await query.ToListAsync();
+        return items.Where(a =>
+            FuzzySearch.IsMatch(a.Name, name) &&
+            FuzzySearch.IsMatch(a.Category, category))
+            .ToList();
     }
 
     [HttpGet("{id}")]

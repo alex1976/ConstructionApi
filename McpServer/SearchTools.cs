@@ -12,69 +12,60 @@ public class SearchTools
     [McpServerTool, Description("Search price list items by code, description, category, subcategory, catalog code, catalog description, or catalog author")]
     public static async Task<string> SearchPriceLists(
         AppDbContext db,
-        [Description("Filter by catalog code (substring)")] string? catalogCode = null,
-        [Description("Filter by catalog description (substring)")] string? catalogDescription = null,
-        [Description("Filter by catalog author (substring)")] string? catalogAuthor = null,
-        [Description("Filter by item code (substring)")] string? code = null,
-        [Description("Filter by description (substring)")] string? description = null,
-        [Description("Filter by category (substring)")] string? category = null,
-        [Description("Filter by subcategory (substring)")] string? subcategory = null)
+        [Description("Filter by catalog code (fuzzy, tolerates typos)")] string? catalogCode = null,
+        [Description("Filter by catalog description (fuzzy, tolerates typos)")] string? catalogDescription = null,
+        [Description("Filter by catalog author (fuzzy, tolerates typos)")] string? catalogAuthor = null,
+        [Description("Filter by item code (fuzzy, tolerates typos)")] string? code = null,
+        [Description("Filter by description (fuzzy, tolerates typos)")] string? description = null,
+        [Description("Filter by category (fuzzy, tolerates typos)")] string? category = null,
+        [Description("Filter by subcategory (fuzzy, tolerates typos)")] string? subcategory = null)
     {
-        var query = db.PriceLists.AsQueryable();
+        var items = await db.PriceLists.ToListAsync();
 
-        if (!string.IsNullOrWhiteSpace(catalogCode))
-            query = query.Where(p => p.CatalogCode.Contains(catalogCode));
-        if (!string.IsNullOrWhiteSpace(catalogDescription))
-            query = query.Where(p => p.CatalogDescription.Contains(catalogDescription));
-        if (!string.IsNullOrWhiteSpace(catalogAuthor))
-            query = query.Where(p => p.CatalogAuthor.Contains(catalogAuthor));
-        if (!string.IsNullOrWhiteSpace(code))
-            query = query.Where(p => p.Code.Contains(code));
-        if (!string.IsNullOrWhiteSpace(description))
-            query = query.Where(p => p.Description.Contains(description));
-        if (!string.IsNullOrWhiteSpace(category))
-            query = query.Where(p => p.Category.Contains(category));
-        if (!string.IsNullOrWhiteSpace(subcategory))
-            query = query.Where(p => p.Subcategory.Contains(subcategory));
+        var results = items.Where(p =>
+            FuzzySearch.IsMatch(p.CatalogCode, catalogCode) &&
+            FuzzySearch.IsMatch(p.CatalogDescription, catalogDescription) &&
+            FuzzySearch.IsMatch(p.CatalogAuthor, catalogAuthor) &&
+            FuzzySearch.IsMatch(p.Code, code) &&
+            FuzzySearch.IsMatch(p.Description, description) &&
+            FuzzySearch.IsMatch(p.Category, category) &&
+            FuzzySearch.IsMatch(p.Subcategory, subcategory))
+            .ToList();
 
-        var results = await query.ToListAsync();
         return JsonSerializer.Serialize(results, new JsonSerializerOptions { WriteIndented = true });
     }
 
     [McpServerTool, Description("Search assembly items by name and/or category")]
     public static async Task<string> SearchAssemblies(
         AppDbContext db,
-        [Description("Filter by assembly name (substring)")] string? name = null,
-        [Description("Filter by category (substring)")] string? category = null)
+        [Description("Filter by assembly name (fuzzy, tolerates typos)")] string? name = null,
+        [Description("Filter by category (fuzzy, tolerates typos)")] string? category = null)
     {
-        var query = db.Assemblies.Include(a => a.AssemblyPriceListItems).ThenInclude(ap => ap.PriceList).AsQueryable();
+        var items = await db.Assemblies.Include(a => a.AssemblyPriceListItems).ThenInclude(ap => ap.PriceList).ToListAsync();
 
-        if (!string.IsNullOrWhiteSpace(name))
-            query = query.Where(a => a.Name.Contains(name));
-        if (!string.IsNullOrWhiteSpace(category))
-            query = query.Where(a => a.Category.Contains(category));
+        var results = items.Where(a =>
+            FuzzySearch.IsMatch(a.Name, name) &&
+            FuzzySearch.IsMatch(a.Category, category))
+            .ToList();
 
-        var results = await query.ToListAsync();
         return JsonSerializer.Serialize(results, new JsonSerializerOptions { WriteIndented = true, ReferenceHandler = ReferenceHandler.IgnoreCycles });
     }
 
     [McpServerTool, Description("Search phases by name, description, and/or category")]
     public static async Task<string> SearchPhases(
         AppDbContext db,
-        [Description("Filter by phase name (substring)")] string? name = null,
-        [Description("Filter by description (substring)")] string? description = null,
-        [Description("Filter by category (substring)")] string? category = null)
+        [Description("Filter by phase name (fuzzy, tolerates typos)")] string? name = null,
+        [Description("Filter by description (fuzzy, tolerates typos)")] string? description = null,
+        [Description("Filter by category (fuzzy, tolerates typos)")] string? category = null)
     {
-        var query = db.Phases.Include(p => p.PhaseAssemblyListItems).ThenInclude(pa => pa.Assembly).AsQueryable();
+        var items = await db.Phases.Include(p => p.PhaseAssemblyListItems).ThenInclude(pa => pa.Assembly).ToListAsync();
 
-        if (!string.IsNullOrWhiteSpace(name))
-            query = query.Where(p => p.Name.Contains(name));
-        if (!string.IsNullOrWhiteSpace(description))
-            query = query.Where(p => p.Description.Contains(description));
-        if (!string.IsNullOrWhiteSpace(category))
-            query = query.Where(p => p.Category.Contains(category));
+        var results = items.Where(p =>
+            FuzzySearch.IsMatch(p.Name, name) &&
+            FuzzySearch.IsMatch(p.Description, description) &&
+            FuzzySearch.IsMatch(p.Category, category))
+            .ToList();
 
-        var results = await query.ToListAsync();
         return JsonSerializer.Serialize(results, new JsonSerializerOptions { WriteIndented = true, ReferenceHandler = ReferenceHandler.IgnoreCycles });
     }
 }

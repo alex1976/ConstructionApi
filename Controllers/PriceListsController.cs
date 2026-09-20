@@ -32,24 +32,17 @@ public class PriceListsController : ControllerBase
         [FromQuery] string? category = null,
         [FromQuery] string? subcategory = null)
     {
-        var query = _db.PriceLists.AsQueryable();
+        var items = await _db.PriceLists.ToListAsync();
 
-        if (!string.IsNullOrWhiteSpace(catalogCode))
-            query = query.Where(p => p.CatalogCode.Contains(catalogCode));
-        if (!string.IsNullOrWhiteSpace(catalogDescription))
-            query = query.Where(p => p.CatalogDescription.Contains(catalogDescription));
-        if (!string.IsNullOrWhiteSpace(catalogAuthor))
-            query = query.Where(p => p.CatalogAuthor.Contains(catalogAuthor));
-        if (!string.IsNullOrWhiteSpace(code))
-            query = query.Where(p => p.Code.Contains(code));
-        if (!string.IsNullOrWhiteSpace(description))
-            query = query.Where(p => p.Description.Contains(description));
-        if (!string.IsNullOrWhiteSpace(category))
-            query = query.Where(p => p.Category.Contains(category));
-        if (!string.IsNullOrWhiteSpace(subcategory))
-            query = query.Where(p => p.Subcategory.Contains(subcategory));
-
-        return await query.ToListAsync();
+        return items.Where(p =>
+            FuzzySearch.IsMatch(p.CatalogCode, catalogCode) &&
+            FuzzySearch.IsMatch(p.CatalogDescription, catalogDescription) &&
+            FuzzySearch.IsMatch(p.CatalogAuthor, catalogAuthor) &&
+            FuzzySearch.IsMatch(p.Code, code) &&
+            FuzzySearch.IsMatch(p.Description, description) &&
+            FuzzySearch.IsMatch(p.Category, category) &&
+            FuzzySearch.IsMatch(p.Subcategory, subcategory))
+            .ToList();
     }
 
     [HttpGet("{id}")]

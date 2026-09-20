@@ -30,17 +30,15 @@ public class PhasesController : ControllerBase
         [FromQuery] string? name = null,
         [FromQuery] string? category = null)
     {
-        var query = _db.Phases
+        var items = await _db.Phases
             .Include(p => p.PhaseAssemblyListItems)
             .ThenInclude(pa => pa.Assembly)
-            .AsQueryable();
+            .ToListAsync();
 
-        if (!string.IsNullOrWhiteSpace(name))
-            query = query.Where(p => p.Name.Contains(name));
-        if (!string.IsNullOrWhiteSpace(category))
-            query = query.Where(p => p.Category.Contains(category));
-
-        return await query.ToListAsync();
+        return items.Where(p =>
+            FuzzySearch.IsMatch(p.Name, name) &&
+            FuzzySearch.IsMatch(p.Category, category))
+            .ToList();
     }
 
     [HttpGet("{id}")]
